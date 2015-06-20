@@ -28,7 +28,7 @@ class LogfindFileReadTestCase(unittest.TestCase):
         os.remove(self.fileout)
 
     def test_list_filepath_regexes(self):
-        """Test if `logfind.list_filepaths` returns correctly."""
+        """Test if `logfind.list_filepath_regexes` returns correctly."""
 
         inlist = logfind.list_filepath_regexes()
         outlist = [
