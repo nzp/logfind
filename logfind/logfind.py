@@ -2,7 +2,7 @@
 
 from __future__ import unicode_literals
 
-import os.path
+import os
 import re
 
 
@@ -28,3 +28,27 @@ def list_filepath_regexes():
 
     return filepath_regexes
 
+
+def get_paths(regex, root="/var/log"):
+    """Find paths matching the regular expression.
+    
+    :param root: root directory for the walk
+    :type root: string
+    :param regex: regular expression to match against
+    :rtype: list of strings (matched filepaths)
+    """
+    cre = re.compile(regex)
+    path_list = []
+
+    # TODO: This needs to do more work to filter parent directories.  Since
+    # the search in reality needs to start at / it would take an unacceptable
+    # amount of time to finish if it just walked the filesystem naively from
+    # top to bottom.
+    for directory, children, filenames in os.walk(root):
+        for filename in filenames:
+            path = os.path.join(directory, filename)
+
+            if cre.match(path):
+                path_list.append(path)
+    
+    return path_list

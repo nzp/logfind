@@ -9,6 +9,9 @@ import os
 from logfind import logfind
 
 
+# XXX: All of the fixture data needs to be made self contained.  Now it just
+# uses concrete files on my own local filesystem, which is dumb.
+
 class LogfindFileReadTestCase(unittest.TestCase):
     """Test logfind file reading."""
 
@@ -39,6 +42,48 @@ class LogfindFileReadTestCase(unittest.TestCase):
                 ]
 
         self.assertEqual(inlist, outlist)
+
+
+class FindFilesTestCase(unittest.TestCase):
+    """Test log file discovery."""
+
+    def test_get_paths(self):
+        """Test if `logfind.get_paths` correctly finds RE paths."""
+
+        # First member of the tuple is the RE, second is the list of paths
+        # it matches.
+        #
+        # XXX: It is important to note that the implementation of get_paths is
+        # practically identical to the code used to get the lists of paths in
+        # test_data, so it's safe to say that, at the moment, get_paths just is
+        # testing itself.  So, test_data needs to be made independent.  This
+        # needs to be done when the all fixture data is made self contained
+        # within tests directory and independent of live files.
+        test_data = [
+                ("/var/log/a.*\.log$",
+                    [
+                        "/var/log/apport.log",
+                        "/var/log/alternatives.log",
+                        "/var/log/auth.log",
+                        "/var/log/apt/term.log",
+                        "/var/log/apt/history.log",
+                        ]
+                ),
+                ("/var/log/Xorg\.\d+\.log$",
+                    [
+                        "/var/log/Xorg.0.log",
+                        "/var/log/Xorg.1.log",
+                        ]
+                ),
+                ("/var/log/m.*\.\d$",
+                    [
+                        "/var/log/mail.log.1",
+                        ]
+                )
+            ]
+        for case in test_data:
+            out_paths = logfind.get_paths(case[0])
+            self.assertEquals(case[1], out_paths)
 
 
 if __name__ == "__main__":
