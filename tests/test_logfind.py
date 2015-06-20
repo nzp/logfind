@@ -35,6 +35,7 @@ class LogfindFileReadTestCase(unittest.TestCase):
                 "/usr/share/log/blarhf",
                 "/usr/.*/.*",
                 "/[a-zA-Z0-9]+/.+",
+                "~/.logs/.*",
                 ]
 
         self.assertEqual(inlist, outlist)
