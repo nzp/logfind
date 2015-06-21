@@ -29,7 +29,7 @@ def list_filepath_regexes():
     return filepath_regexes
 
 
-def get_paths(regex, root="/var/log"):
+def get_paths(regex, root="/"):
     """Find paths matching the regular expression.
     
     :param root: root directory for the walk
@@ -40,15 +40,35 @@ def get_paths(regex, root="/var/log"):
     cre = re.compile(regex)
     path_list = []
 
-    # TODO: This needs to do more work to filter parent directories.  Since
-    # the search in reality needs to start at / it would take an unacceptable
-    # amount of time to finish if it just walked the filesystem naively from
-    # top to bottom.
+    # To be able to have a reasonable (in fact, fast) walk time when starting
+    # from "/" (or some other high root) we need to filter out unneeded
+    # directories.  This would be easier if paths were shell globs, but they
+    # are full REs.  Since `re` library doesn't understand filepaths, we have
+    # to manually slice the whole regex, and then use intermediate directories
+    # as regexes against which we filter at each level of the walk.
+    #
+    # Since string.split() gives "" as the first element of the list in this
+    # case (because of the leading separator), we just discard it.
+    re_parts = regex.split("/")
+    del re_parts[0] 
+
     for directory, children, filenames in os.walk(root):
+        # When there is only 1 part left, we can't do any additional filtering.
+        # Continuing to filter would clobber any directories matched by the last
+        # part because re_parts would get = [], i.e. no directories would match
+        # anymore.
+        #
+        # And until we get to one part, there's no point in trying to match
+        # files, thus continue.
+        if len(re_parts) > 1:
+            children[:] = [child for child in children if re.match(re_parts[0], child)]
+            re_parts[:] = re_parts[1:]
+            continue
+
         for filename in filenames:
             path = os.path.join(directory, filename)
-
             if cre.match(path):
                 path_list.append(path)
-    
+
     return path_list
+
