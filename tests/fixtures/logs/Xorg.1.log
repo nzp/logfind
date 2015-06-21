@@ -1,0 +1,517 @@
+[ 40503.901] 
+X.Org X Server 1.13.3
+Release Date: 2013-03-07
+[ 40503.901] X Protocol Version 11, Revision 0
+[ 40503.901] Build Operating System: Linux 3.2.0-37-generic x86_64 Ubuntu
+[ 40503.901] Current Operating System: Linux sputnjik 3.8.0-29-generic #42-Ubuntu SMP Tue Aug 13 19:40:39 UTC 2013 x86_64
+[ 40503.901] Kernel command line: BOOT_IMAGE=/vmlinuz-3.8.0-29-generic root=/dev/mapper/ubuntu--vg-root ro quiet splash vt.handoff=7
+[ 40503.901] Build Date: 17 April 2013  10:43:13PM
+[ 40503.901] xorg-server 2:1.13.3-0ubuntu6 (For technical support please see http://www.ubuntu.com/support) 
+[ 40503.901] Current version of pixman: 0.28.2
+[ 40503.901] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[ 40503.901] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[ 40503.901] (==) Log file: "/var/log/Xorg.1.log", Time: Wed Aug 21 10:31:54 2013
+[ 40503.901] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[ 40503.902] (==) No Layout section.  Using the first Screen section.
+[ 40503.902] (==) No screen section available. Using defaults.
+[ 40503.902] (**) |-->Screen "Default Screen Section" (0)
+[ 40503.902] (**) |   |-->Monitor "<default monitor>"
+[ 40503.902] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[ 40503.902] (==) Automatically adding devices
+[ 40503.902] (==) Automatically enabling devices
+[ 40503.902] (==) Automatically adding GPU devices
+[ 40503.902] (WW) The directory "/usr/share/fonts/X11/cyrillic" does not exist.
+[ 40503.902] 	Entry deleted from font path.
+[ 40503.902] (WW) The directory "/usr/share/fonts/X11/100dpi/" does not exist.
+[ 40503.902] 	Entry deleted from font path.
+[ 40503.902] (WW) The directory "/usr/share/fonts/X11/75dpi/" does not exist.
+[ 40503.902] 	Entry deleted from font path.
+[ 40503.902] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[ 40503.902] 	Entry deleted from font path.
+[ 40503.902] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[ 40503.902] 	Entry deleted from font path.
+[ 40503.902] (WW) The directory "/var/lib/defoma/x-ttcidfont-conf.d/dirs/TrueType" does not exist.
+[ 40503.902] 	Entry deleted from font path.
+[ 40503.902] (==) FontPath set to:
+	/usr/share/fonts/X11/misc,
+	/usr/share/fonts/X11/Type1,
+	built-ins
+[ 40503.902] (==) ModulePath set to "/usr/lib/x86_64-linux-gnu/xorg/extra-modules,/usr/lib/xorg/extra-modules,/usr/lib/xorg/modules"
+[ 40503.902] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[ 40503.902] (II) Loader magic: 0x7f2c69082d20
+[ 40503.902] (II) Module ABI versions:
+[ 40503.902] 	X.Org ANSI C Emulation: 0.4
+[ 40503.902] 	X.Org Video Driver: 13.1
+[ 40503.902] 	X.Org XInput driver : 18.0
+[ 40503.902] 	X.Org Server Extension : 7.0
+[ 40503.902] (II) config/udev: Adding drm device (/dev/dri/card0)
+[ 40503.903] (--) PCI:*(0:0:2:0) 8086:0152:1043:844d rev 9, Mem @ 0xf7800000/4194304, 0xe0000000/268435456, I/O @ 0x0000f000/64
+[ 40503.903] (II) Open ACPI successful (/var/run/acpid.socket)
+[ 40503.903] Initializing built-in extension Generic Event Extension
+[ 40503.903] Initializing built-in extension SHAPE
+[ 40503.903] Initializing built-in extension MIT-SHM
+[ 40503.903] Initializing built-in extension XInputExtension
+[ 40503.903] Initializing built-in extension XTEST
+[ 40503.903] Initializing built-in extension BIG-REQUESTS
+[ 40503.903] Initializing built-in extension SYNC
+[ 40503.903] Initializing built-in extension XKEYBOARD
+[ 40503.904] Initializing built-in extension XC-MISC
+[ 40503.904] Initializing built-in extension SECURITY
+[ 40503.904] Initializing built-in extension XINERAMA
+[ 40503.904] Initializing built-in extension XFIXES
+[ 40503.904] Initializing built-in extension RENDER
+[ 40503.904] Initializing built-in extension RANDR
+[ 40503.904] Initializing built-in extension COMPOSITE
+[ 40503.904] Initializing built-in extension DAMAGE
+[ 40503.904] Initializing built-in extension MIT-SCREEN-SAVER
+[ 40503.904] Initializing built-in extension DOUBLE-BUFFER
+[ 40503.904] Initializing built-in extension RECORD
+[ 40503.904] Initializing built-in extension DPMS
+[ 40503.904] Initializing built-in extension X-Resource
+[ 40503.904] Initializing built-in extension XVideo
+[ 40503.904] Initializing built-in extension XVideo-MotionCompensation
+[ 40503.904] Initializing built-in extension SELinux
+[ 40503.904] Initializing built-in extension XFree86-VidModeExtension
+[ 40503.904] Initializing built-in extension XFree86-DGA
+[ 40503.904] Initializing built-in extension XFree86-DRI
+[ 40503.904] Initializing built-in extension DRI2
+[ 40503.904] (II) LoadModule: "glx"
+[ 40503.904] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[ 40503.904] (II) Module glx: vendor="X.Org Foundation"
+[ 40503.904] 	compiled for 1.13.3, module version = 1.0.0
+[ 40503.904] 	ABI class: X.Org Server Extension, version 7.0
+[ 40503.904] (==) AIGLX enabled
+[ 40503.904] Loading extension GLX
+[ 40503.904] (==) Matched intel as autoconfigured driver 0
+[ 40503.904] (==) Matched intel as autoconfigured driver 1
+[ 40503.904] (==) Matched vesa as autoconfigured driver 2
+[ 40503.904] (==) Matched modesetting as autoconfigured driver 3
+[ 40503.904] (==) Matched fbdev as autoconfigured driver 4
+[ 40503.904] (==) Assigned the driver to the xf86ConfigLayout
+[ 40503.904] (II) LoadModule: "intel"
+[ 40503.905] (II) Loading /usr/lib/xorg/modules/drivers/intel_drv.so
+[ 40503.905] (II) Module intel: vendor="X.Org Foundation"
+[ 40503.905] 	compiled for 1.13.3, module version = 2.21.6
+[ 40503.905] 	Module class: X.Org Video Driver
+[ 40503.905] 	ABI class: X.Org Video Driver, version 13.1
+[ 40503.905] (II) LoadModule: "vesa"
+[ 40503.905] (II) Loading /usr/lib/xorg/modules/drivers/vesa_drv.so
+[ 40503.905] (II) Module vesa: vendor="X.Org Foundation"
+[ 40503.905] 	compiled for 1.12.99.902, module version = 2.3.2
+[ 40503.905] 	Module class: X.Org Video Driver
+[ 40503.905] 	ABI class: X.Org Video Driver, version 13.0
+[ 40503.905] (II) LoadModule: "modesetting"
+[ 40503.905] (II) Loading /usr/lib/xorg/modules/drivers/modesetting_drv.so
+[ 40503.906] (II) Module modesetting: vendor="X.Org Foundation"
+[ 40503.906] 	compiled for 1.13.3, module version = 0.7.0
+[ 40503.906] 	Module class: X.Org Video Driver
+[ 40503.906] 	ABI class: X.Org Video Driver, version 13.1
+[ 40503.906] (II) LoadModule: "fbdev"
+[ 40503.906] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[ 40503.906] (II) Module fbdev: vendor="X.Org Foundation"
+[ 40503.906] 	compiled for 1.12.99.902, module version = 0.4.3
+[ 40503.906] 	Module class: X.Org Video Driver
+[ 40503.906] 	ABI class: X.Org Video Driver, version 13.0
+[ 40503.906] (II) intel: Driver for Intel Integrated Graphics Chipsets: i810,
+	i810-dc100, i810e, i815, i830M, 845G, 854, 852GM/855GM, 865G, 915G,
+	E7221 (i915), 915GM, 945G, 945GM, 945GME, Pineview GM, Pineview G,
+	965G, G35, 965Q, 946GZ, 965GM, 965GME/GLE, G33, Q35, Q33, GM45,
+	4 Series, G45/G43, Q45/Q43, G41, B43, B43, Clarkdale, Arrandale,
+	Sandybridge Desktop (GT1), Sandybridge Desktop (GT2),
+	Sandybridge Desktop (GT2+), Sandybridge Mobile (GT1),
+	Sandybridge Mobile (GT2), Sandybridge Mobile (GT2+),
+	Sandybridge Server, Ivybridge Mobile (GT1), Ivybridge Mobile (GT2),
+	Ivybridge Desktop (GT1), Ivybridge Desktop (GT2), Ivybridge Server,
+	Ivybridge Server (GT2), HD Graphics, HD Graphics 4600,
+	Haswell Desktop (GT3), HD Graphics, HD Graphics 4600,
+	Haswell Mobile (GT3), HD Graphics, HD Graphics P4600/P4700,
+	Haswell Server (GT3), Haswell (GT1), Haswell (GT2), Haswell (GT3),
+	HD Graphics, Haswell (GT2), Haswell (GT3), Haswell SDV Desktop (GT1),
+	Haswell SDV Desktop (GT2), Haswell SDV Desktop (GT3),
+	Haswell SDV Mobile (GT1), Haswell SDV Mobile (GT2),
+	Haswell SDV Mobile (GT3), Haswell SDV Server (GT1),
+	Haswell SDV Server (GT2), Haswell SDV Server (GT3),
+	Haswell SDV (GT1), Haswell SDV (GT2), Haswell SDV (GT3),
+	Haswell SDV (GT1), Haswell SDV (GT2), Haswell SDV (GT3),
+	Haswell ULT Desktop (GT1), Haswell ULT Desktop (GT2),
+	Iris(TM) Graphics 5100, HD Graphics, HD Graphics 4400,
+	HD Graphics 5000, Haswell ULT Server (GT1), Haswell ULT Server (GT2),
+	Iris(TM) Graphics 5100, Haswell ULT (GT1), Haswell ULT (GT2),
+	Iris(TM) Graphics 5100, HD Graphics, HD Graphics 4200,
+	Iris(TM) Graphics 5100, Haswell CRW Desktop (GT1), HD Graphics 4600,
+	Iris(TM) Pro Graphics 5200, Haswell CRW Mobile (GT1),
+	HD Graphics 4600, Iris(TM) Pro Graphics 5200,
+	Haswell CRW Server (GT1), Haswell CRW Server (GT2),
+	Iris(TM) Pro Graphics 5200, Haswell CRW (GT1), Haswell CRW (GT2),
+	Iris(TM) Pro Graphics 5200, Haswell CRW (GT1), Haswell CRW (GT2),
+	Iris(TM) Pro Graphics 5200, ValleyView PO board
+[ 40503.907] (II) VESA: driver for VESA chipsets: vesa
+[ 40503.907] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[ 40503.907] (II) FBDEV: driver for framebuffer: fbdev
+[ 40503.907] (++) using VT number 8
+
+[ 40503.962] (II) intel(0): SNA compiled: xserver-xorg-video-intel 2:2.21.6-0ubuntu4.1 (Maarten Lankhorst <maarten.lankhorst@ubuntu.com>)
+[ 40503.962] (WW) Falling back to old probe method for vesa
+[ 40503.962] (WW) Falling back to old probe method for modesetting
+[ 40503.962] (WW) Falling back to old probe method for fbdev
+[ 40503.962] (II) Loading sub module "fbdevhw"
+[ 40503.962] (II) LoadModule: "fbdevhw"
+[ 40503.962] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[ 40503.962] (II) Module fbdevhw: vendor="X.Org Foundation"
+[ 40503.962] 	compiled for 1.13.3, module version = 0.0.2
+[ 40503.962] 	ABI class: X.Org Video Driver, version 13.1
+[ 40503.963] (II) intel(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[ 40503.963] (==) intel(0): Depth 24, (--) framebuffer bpp 32
+[ 40503.963] (==) intel(0): RGB weight 888
+[ 40503.963] (==) intel(0): Default visual is TrueColor
+[ 40503.963] (--) intel(0): Integrated Graphics Chipset: Intel(R) Ivybridge Desktop (GT1)
+[ 40503.963] (--) intel(0): CPU: x86-64, sse2, sse3, ssse3, sse4.1, sse4.2
+[ 40503.963] (**) intel(0): Framebuffer tiled
+[ 40503.963] (**) intel(0): Pixmaps tiled
+[ 40503.963] (**) intel(0): "Tear free" disabled
+[ 40503.963] (**) intel(0): Forcing per-crtc-pixmaps? no
+[ 40504.112] (II) intel(0): Output VGA1 has no monitor section
+[ 40504.264] (II) intel(0): EDID for output VGA1
+[ 40504.264] (II) intel(0): Manufacturer: ACI  Model: 22a8  Serial#: 9913
+[ 40504.264] (II) intel(0): Year: 2008  Week: 32
+[ 40504.264] (II) intel(0): EDID Version: 1.3
+[ 40504.264] (II) intel(0): Analog Display Input,  Input Voltage Level: 0.700/0.700 V
+[ 40504.264] (II) intel(0): Sync:  Separate
+[ 40504.264] (II) intel(0): Max Image Size [cm]: horiz.: 47  vert.: 30
+[ 40504.264] (II) intel(0): Gamma: 2.20
+[ 40504.264] (II) intel(0): DPMS capabilities: Off; RGB/Color Display
+[ 40504.264] (II) intel(0): First detailed timing is preferred mode
+[ 40504.264] (II) intel(0): redX: 0.644 redY: 0.332   greenX: 0.286 greenY: 0.601
+[ 40504.264] (II) intel(0): blueX: 0.152 blueY: 0.076   whiteX: 0.312 whiteY: 0.328
+[ 40504.264] (II) intel(0): Supported established timings:
+[ 40504.264] (II) intel(0): 720x400@70Hz
+[ 40504.264] (II) intel(0): 640x480@60Hz
+[ 40504.264] (II) intel(0): 640x480@67Hz
+[ 40504.264] (II) intel(0): 640x480@72Hz
+[ 40504.264] (II) intel(0): 640x480@75Hz
+[ 40504.264] (II) intel(0): 800x600@56Hz
+[ 40504.264] (II) intel(0): 800x600@60Hz
+[ 40504.264] (II) intel(0): 800x600@72Hz
+[ 40504.264] (II) intel(0): 800x600@75Hz
+[ 40504.264] (II) intel(0): 832x624@75Hz
+[ 40504.264] (II) intel(0): 1024x768@60Hz
+[ 40504.264] (II) intel(0): 1024x768@70Hz
+[ 40504.264] (II) intel(0): 1024x768@75Hz
+[ 40504.264] (II) intel(0): 1280x1024@75Hz
+[ 40504.264] (II) intel(0): Manufacturer's mask: 0
+[ 40504.264] (II) intel(0): Supported standard timings:
+[ 40504.264] (II) intel(0): #0: hsize: 1152  vsize 864  refresh: 75  vid: 20337
+[ 40504.264] (II) intel(0): #1: hsize: 1280  vsize 960  refresh: 60  vid: 16513
+[ 40504.264] (II) intel(0): #2: hsize: 1280  vsize 1024  refresh: 60  vid: 32897
+[ 40504.264] (II) intel(0): #3: hsize: 1440  vsize 900  refresh: 60  vid: 149
+[ 40504.264] (II) intel(0): #4: hsize: 1680  vsize 1050  refresh: 60  vid: 179
+[ 40504.264] (II) intel(0): #5: hsize: 1280  vsize 800  refresh: 60  vid: 129
+[ 40504.264] (II) intel(0): Supported detailed timing:
+[ 40504.264] (II) intel(0): clock: 146.0 MHz   Image Size:  473 x 296 mm
+[ 40504.264] (II) intel(0): h_active: 1680  h_sync: 1960  h_sync_end 2136 h_blank_end 2240 h_border: 0
+[ 40504.264] (II) intel(0): v_active: 1050  v_sync: 1053  v_sync_end 1059 v_blanking: 1089 v_border: 0
+[ 40504.264] (II) intel(0): Serial No: 88LMTF009913
+[ 40504.264] (II) intel(0): Ranges: V min: 55 V max: 75 Hz, H min: 30 H max: 85 kHz, PixClock max 165 MHz
+[ 40504.264] (II) intel(0): Monitor name: ASUS VW221
+[ 40504.264] (II) intel(0): EDID (in hex):
+[ 40504.264] (II) intel(0): 	00ffffffffffff000469a822b9260000
+[ 40504.264] (II) intel(0): 	20120103682f1e782ac720a455499927
+[ 40504.264] (II) intel(0): 	135054bfef00714f814081809500b300
+[ 40504.264] (II) intel(0): 	81000101010108399030621a274018b0
+[ 40504.264] (II) intel(0): 	3640d9281100001c000000ff0038384c
+[ 40504.264] (II) intel(0): 	4d54463030393931330a000000fd0037
+[ 40504.264] (II) intel(0): 	4b1e5510000a202020202020000000fc
+[ 40504.264] (II) intel(0): 	00415355532056573232310a202000e4
+[ 40504.264] (II) intel(0): Printing probed modes for output VGA1
+[ 40504.264] (II) intel(0): Modeline "1680x1050"x59.9  146.00  1680 1960 2136 2240  1050 1053 1059 1089 -hsync +vsync (65.2 kHz eP)
+[ 40504.264] (II) intel(0): Modeline "1280x1024"x75.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[ 40504.264] (II) intel(0): Modeline "1280x1024"x60.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[ 40504.264] (II) intel(0): Modeline "1440x900"x59.9  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[ 40504.264] (II) intel(0): Modeline "1280x960"x60.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[ 40504.264] (II) intel(0): Modeline "1280x800"x59.8   83.50  1280 1352 1480 1680  800 803 809 831 +hsync -vsync (49.7 kHz e)
+[ 40504.264] (II) intel(0): Modeline "1152x864"x75.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[ 40504.264] (II) intel(0): Modeline "1024x768"x75.1   78.80  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.1 kHz e)
+[ 40504.264] (II) intel(0): Modeline "1024x768"x70.1   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[ 40504.264] (II) intel(0): Modeline "1024x768"x60.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[ 40504.264] (II) intel(0): Modeline "832x624"x74.6   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[ 40504.264] (II) intel(0): Modeline "800x600"x72.2   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[ 40504.264] (II) intel(0): Modeline "800x600"x75.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[ 40504.264] (II) intel(0): Modeline "800x600"x60.3   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[ 40504.264] (II) intel(0): Modeline "800x600"x56.2   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[ 40504.264] (II) intel(0): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 491 520 -hsync -vsync (37.9 kHz e)
+[ 40504.264] (II) intel(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[ 40504.264] (II) intel(0): Modeline "640x480"x66.7   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[ 40504.264] (II) intel(0): Modeline "640x480"x60.0   25.20  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[ 40504.264] (II) intel(0): Modeline "720x400"x70.1   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[ 40504.264] (II) intel(0): Output VGA1 connected
+[ 40504.264] (II) intel(0): Using exact sizes for initial modes
+[ 40504.264] (II) intel(0): Output VGA1 using initial mode 1680x1050
+[ 40504.265] (II) intel(0): Using default gamma of (1.0, 1.0, 1.0) unless otherwise stated.
+[ 40504.265] (==) intel(0): DPI set to (96, 96)
+[ 40504.265] (II) Loading sub module "dri2"
+[ 40504.265] (II) LoadModule: "dri2"
+[ 40504.265] (II) Module "dri2" already built-in
+[ 40504.265] (II) UnloadModule: "vesa"
+[ 40504.265] (II) Unloading vesa
+[ 40504.265] (II) UnloadModule: "modesetting"
+[ 40504.265] (II) Unloading modesetting
+[ 40504.265] (II) UnloadModule: "fbdev"
+[ 40504.265] (II) Unloading fbdev
+[ 40504.265] (II) UnloadSubModule: "fbdevhw"
+[ 40504.265] (II) Unloading fbdevhw
+[ 40504.265] (==) Depth 24 pixmap format is 32 bpp
+[ 40504.265] (II) intel(0): SNA initialized with IvyBridge backend
+[ 40504.265] (==) intel(0): Backing store disabled
+[ 40504.265] (==) intel(0): Silken mouse enabled
+[ 40504.265] (II) intel(0): HW Cursor enabled
+[ 40504.265] (II) intel(0): RandR 1.2 enabled, ignore the following RandR disabled message.
+[ 40504.265] (==) intel(0): DPMS enabled
+[ 40504.265] (II) intel(0): [DRI2] Setup complete
+[ 40504.265] (II) intel(0): [DRI2]   DRI driver: i965
+[ 40504.265] (II) intel(0): direct rendering: DRI2 Enabled
+[ 40504.265] (==) intel(0): hotplug detection: "enabled"
+[ 40504.265] (--) RandR disabled
+[ 40504.271] (II) SELinux: Disabled on system
+[ 40504.276] (II) AIGLX: enabled GLX_MESA_copy_sub_buffer
+[ 40504.276] (II) AIGLX: enabled GLX_INTEL_swap_event
+[ 40504.276] (II) AIGLX: enabled GLX_ARB_create_context
+[ 40504.276] (II) AIGLX: enabled GLX_ARB_create_context_profile
+[ 40504.277] (II) AIGLX: enabled GLX_EXT_create_context_es2_profile
+[ 40504.277] (II) AIGLX: enabled GLX_SGI_swap_control and GLX_MESA_swap_control
+[ 40504.277] (II) AIGLX: GLX_EXT_texture_from_pixmap backed by buffer objects
+[ 40504.277] (II) AIGLX: Loaded and initialized i965
+[ 40504.277] (II) GLX: Initialized DRI2 GL provider for screen 0
+[ 40504.277] (II) intel(0): switch to mode 1680x1050 on crtc 3 (pipe 0)
+[ 40504.300] (II) intel(0): Setting screen physical size to 444 x 277
+[ 40504.310] (II) XKB: reuse xkmfile /var/lib/xkb/server-B20D7FC79C7F597315E3E501AEF10E0D866E8E92.xkm
+[ 40504.312] (II) config/udev: Adding input device Power Button (/dev/input/event1)
+[ 40504.312] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[ 40504.312] (II) LoadModule: "evdev"
+[ 40504.312] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
+[ 40504.313] (II) Module evdev: vendor="X.Org Foundation"
+[ 40504.313] 	compiled for 1.13.3, module version = 2.7.3
+[ 40504.313] 	Module class: X.Org XInput Driver
+[ 40504.313] 	ABI class: X.Org XInput driver, version 18.0
+[ 40504.313] (II) Using input driver 'evdev' for 'Power Button'
+[ 40504.313] (**) Power Button: always reports core events
+[ 40504.313] (**) evdev: Power Button: Device: "/dev/input/event1"
+[ 40504.313] (--) evdev: Power Button: Vendor 0 Product 0x1
+[ 40504.313] (--) evdev: Power Button: Found keys
+[ 40504.313] (II) evdev: Power Button: Configuring as keyboard
+[ 40504.313] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXPWRBN:00/input/input1/event1"
+[ 40504.313] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 6)
+[ 40504.313] (**) Option "xkb_rules" "evdev"
+[ 40504.313] (**) Option "xkb_model" "pc105"
+[ 40504.313] (**) Option "xkb_layout" "gb"
+[ 40504.316] (II) XKB: reuse xkmfile /var/lib/xkb/server-2B4266AA55228AE7D9557A18F1965DBA19850816.xkm
+[ 40504.316] (II) config/udev: Adding input device Video Bus (/dev/input/event3)
+[ 40504.316] (**) Video Bus: Applying InputClass "evdev keyboard catchall"
+[ 40504.316] (II) Using input driver 'evdev' for 'Video Bus'
+[ 40504.316] (**) Video Bus: always reports core events
+[ 40504.316] (**) evdev: Video Bus: Device: "/dev/input/event3"
+[ 40504.316] (--) evdev: Video Bus: Vendor 0 Product 0x6
+[ 40504.316] (--) evdev: Video Bus: Found keys
+[ 40504.316] (II) evdev: Video Bus: Configuring as keyboard
+[ 40504.316] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input3/event3"
+[ 40504.317] (II) XINPUT: Adding extended input device "Video Bus" (type: KEYBOARD, id 7)
+[ 40504.317] (**) Option "xkb_rules" "evdev"
+[ 40504.317] (**) Option "xkb_model" "pc105"
+[ 40504.317] (**) Option "xkb_layout" "gb"
+[ 40504.317] (II) config/udev: Adding input device Power Button (/dev/input/event0)
+[ 40504.317] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[ 40504.317] (II) Using input driver 'evdev' for 'Power Button'
+[ 40504.317] (**) Power Button: always reports core events
+[ 40504.317] (**) evdev: Power Button: Device: "/dev/input/event0"
+[ 40504.317] (--) evdev: Power Button: Vendor 0 Product 0x1
+[ 40504.317] (--) evdev: Power Button: Found keys
+[ 40504.317] (II) evdev: Power Button: Configuring as keyboard
+[ 40504.317] (**) Option "config_info" "udev:/sys/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input0/event0"
+[ 40504.317] (II) XINPUT: Adding extended input device "Power Button" (type: KEYBOARD, id 8)
+[ 40504.317] (**) Option "xkb_rules" "evdev"
+[ 40504.317] (**) Option "xkb_model" "pc105"
+[ 40504.317] (**) Option "xkb_layout" "gb"
+[ 40504.317] (II) config/udev: Adding drm device (/dev/dri/card0) card0 /sys/devices/pci0000:00/0000:00:02.0/drm/card0
+[ 40504.317] (II) config/udev: Ignoring already known drm device (/dev/dri/card0)
+[ 40504.317] (II) config/udev: Adding input device HDA Intel PCH Line (/dev/input/event5)
+[ 40504.317] (II) No input driver specified, ignoring this device.
+[ 40504.317] (II) This device may have been added with another device file.
+[ 40504.318] (II) config/udev: Adding input device HDA Intel PCH Rear Mic (/dev/input/event6)
+[ 40504.318] (II) No input driver specified, ignoring this device.
+[ 40504.318] (II) This device may have been added with another device file.
+[ 40504.318] (II) config/udev: Adding input device HDA Intel PCH Line Out (/dev/input/event7)
+[ 40504.318] (II) No input driver specified, ignoring this device.
+[ 40504.318] (II) This device may have been added with another device file.
+[ 40504.318] (II) config/udev: Adding input device Eee PC WMI hotkeys (/dev/input/event4)
+[ 40504.318] (**) Eee PC WMI hotkeys: Applying InputClass "evdev keyboard catchall"
+[ 40504.318] (II) Using input driver 'evdev' for 'Eee PC WMI hotkeys'
+[ 40504.318] (**) Eee PC WMI hotkeys: always reports core events
+[ 40504.318] (**) evdev: Eee PC WMI hotkeys: Device: "/dev/input/event4"
+[ 40504.318] (--) evdev: Eee PC WMI hotkeys: Vendor 0 Product 0
+[ 40504.318] (--) evdev: Eee PC WMI hotkeys: Found keys
+[ 40504.318] (II) evdev: Eee PC WMI hotkeys: Configuring as keyboard
+[ 40504.318] (**) Option "config_info" "udev:/sys/devices/platform/eeepc-wmi/input/input4/event4"
+[ 40504.318] (II) XINPUT: Adding extended input device "Eee PC WMI hotkeys" (type: KEYBOARD, id 9)
+[ 40504.318] (**) Option "xkb_rules" "evdev"
+[ 40504.318] (**) Option "xkb_model" "pc105"
+[ 40504.318] (**) Option "xkb_layout" "gb"
+[ 40504.318] (II) config/udev: Adding input device AT Translated Set 2 keyboard (/dev/input/event2)
+[ 40504.318] (**) AT Translated Set 2 keyboard: Applying InputClass "evdev keyboard catchall"
+[ 40504.318] (II) Using input driver 'evdev' for 'AT Translated Set 2 keyboard'
+[ 40504.318] (**) AT Translated Set 2 keyboard: always reports core events
+[ 40504.318] (**) evdev: AT Translated Set 2 keyboard: Device: "/dev/input/event2"
+[ 40504.318] (--) evdev: AT Translated Set 2 keyboard: Vendor 0x1 Product 0x1
+[ 40504.318] (--) evdev: AT Translated Set 2 keyboard: Found keys
+[ 40504.318] (II) evdev: AT Translated Set 2 keyboard: Configuring as keyboard
+[ 40504.318] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio0/input/input2/event2"
+[ 40504.318] (II) XINPUT: Adding extended input device "AT Translated Set 2 keyboard" (type: KEYBOARD, id 10)
+[ 40504.318] (**) Option "xkb_rules" "evdev"
+[ 40504.318] (**) Option "xkb_model" "pc105"
+[ 40504.318] (**) Option "xkb_layout" "gb"
+[ 40504.319] (II) config/udev: Adding input device ImPS/2 Generic Wheel Mouse (/dev/input/event8)
+[ 40504.319] (**) ImPS/2 Generic Wheel Mouse: Applying InputClass "evdev pointer catchall"
+[ 40504.319] (II) Using input driver 'evdev' for 'ImPS/2 Generic Wheel Mouse'
+[ 40504.319] (**) ImPS/2 Generic Wheel Mouse: always reports core events
+[ 40504.319] (**) evdev: ImPS/2 Generic Wheel Mouse: Device: "/dev/input/event8"
+[ 40504.319] (--) evdev: ImPS/2 Generic Wheel Mouse: Vendor 0x2 Product 0x5
+[ 40504.319] (--) evdev: ImPS/2 Generic Wheel Mouse: Found 3 mouse buttons
+[ 40504.319] (--) evdev: ImPS/2 Generic Wheel Mouse: Found scroll wheel(s)
+[ 40504.319] (--) evdev: ImPS/2 Generic Wheel Mouse: Found relative axes
+[ 40504.319] (--) evdev: ImPS/2 Generic Wheel Mouse: Found x and y relative axes
+[ 40504.319] (II) evdev: ImPS/2 Generic Wheel Mouse: Configuring as mouse
+[ 40504.319] (II) evdev: ImPS/2 Generic Wheel Mouse: Adding scrollwheel support
+[ 40504.319] (**) evdev: ImPS/2 Generic Wheel Mouse: YAxisMapping: buttons 4 and 5
+[ 40504.319] (**) evdev: ImPS/2 Generic Wheel Mouse: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[ 40504.319] (**) Option "config_info" "udev:/sys/devices/platform/i8042/serio1/input/input8/event8"
+[ 40504.319] (II) XINPUT: Adding extended input device "ImPS/2 Generic Wheel Mouse" (type: MOUSE, id 11)
+[ 40504.319] (II) evdev: ImPS/2 Generic Wheel Mouse: initialized for relative axes.
+[ 40504.319] (**) ImPS/2 Generic Wheel Mouse: (accel) keeping acceleration scheme 1
+[ 40504.319] (**) ImPS/2 Generic Wheel Mouse: (accel) acceleration profile 0
+[ 40504.319] (**) ImPS/2 Generic Wheel Mouse: (accel) acceleration factor: 2.000
+[ 40504.319] (**) ImPS/2 Generic Wheel Mouse: (accel) acceleration threshold: 4
+[ 40504.319] (II) config/udev: Adding input device ImPS/2 Generic Wheel Mouse (/dev/input/mouse0)
+[ 40504.319] (II) No input driver specified, ignoring this device.
+[ 40504.319] (II) This device may have been added with another device file.
+[ 40504.644] (II) intel(0): EDID vendor "ACI", prod id 8872
+[ 40504.644] (II) intel(0): Using EDID range info for horizontal sync
+[ 40504.644] (II) intel(0): Using EDID range info for vertical refresh
+[ 40504.644] (II) intel(0): Printing DDC gathered Modelines:
+[ 40504.644] (II) intel(0): Modeline "1680x1050"x0.0  146.00  1680 1960 2136 2240  1050 1053 1059 1089 -hsync +vsync (65.2 kHz eP)
+[ 40504.644] (II) intel(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[ 40504.644] (II) intel(0): Modeline "800x600"x0.0   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[ 40504.644] (II) intel(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[ 40504.644] (II) intel(0): Modeline "640x480"x0.0   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[ 40504.644] (II) intel(0): Modeline "640x480"x0.0   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[ 40504.644] (II) intel(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[ 40504.644] (II) intel(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1024x768"x0.0   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[ 40504.644] (II) intel(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[ 40504.644] (II) intel(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[ 40504.644] (II) intel(0): Modeline "800x600"x0.0   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1680x1050"x0.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[ 40504.644] (II) intel(0): Modeline "1280x800"x0.0   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync (49.7 kHz e)
+[ 40504.860] (II) intel(0): EDID vendor "ACI", prod id 8872
+[ 40504.860] (II) intel(0): Using hsync ranges from config file
+[ 40504.860] (II) intel(0): Using vrefresh ranges from config file
+[ 40504.860] (II) intel(0): Printing DDC gathered Modelines:
+[ 40504.860] (II) intel(0): Modeline "1680x1050"x0.0  146.00  1680 1960 2136 2240  1050 1053 1059 1089 -hsync +vsync (65.2 kHz eP)
+[ 40504.860] (II) intel(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[ 40504.860] (II) intel(0): Modeline "800x600"x0.0   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[ 40504.860] (II) intel(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[ 40504.860] (II) intel(0): Modeline "640x480"x0.0   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[ 40504.860] (II) intel(0): Modeline "640x480"x0.0   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[ 40504.860] (II) intel(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[ 40504.860] (II) intel(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1024x768"x0.0   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[ 40504.860] (II) intel(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[ 40504.860] (II) intel(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[ 40504.860] (II) intel(0): Modeline "800x600"x0.0   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1680x1050"x0.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[ 40504.860] (II) intel(0): Modeline "1280x800"x0.0   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync (49.7 kHz e)
+[ 40541.224] (II) AIGLX: Suspending AIGLX clients for VT switch
+[ 40549.372] (II) Open ACPI successful (/var/run/acpid.socket)
+[ 40549.372] (II) AIGLX: Resuming AIGLX clients after VT switch
+[ 40549.372] (II) intel(0): switch to mode 1680x1050 on crtc 3 (pipe 0)
+[ 40549.588] (II) intel(0): EDID vendor "ACI", prod id 8872
+[ 40549.588] (II) intel(0): Using hsync ranges from config file
+[ 40549.588] (II) intel(0): Using vrefresh ranges from config file
+[ 40549.588] (II) intel(0): Printing DDC gathered Modelines:
+[ 40549.588] (II) intel(0): Modeline "1680x1050"x0.0  146.00  1680 1960 2136 2240  1050 1053 1059 1089 -hsync +vsync (65.2 kHz eP)
+[ 40549.588] (II) intel(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[ 40549.588] (II) intel(0): Modeline "800x600"x0.0   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[ 40549.588] (II) intel(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[ 40549.588] (II) intel(0): Modeline "640x480"x0.0   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[ 40549.588] (II) intel(0): Modeline "640x480"x0.0   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[ 40549.588] (II) intel(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[ 40549.588] (II) intel(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1024x768"x0.0   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[ 40549.588] (II) intel(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[ 40549.588] (II) intel(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[ 40549.588] (II) intel(0): Modeline "800x600"x0.0   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1680x1050"x0.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[ 40549.588] (II) intel(0): Modeline "1280x800"x0.0   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync (49.7 kHz e)
+[ 40549.740] (II) intel(0): EDID vendor "ACI", prod id 8872
+[ 40549.740] (II) intel(0): Using hsync ranges from config file
+[ 40549.740] (II) intel(0): Using vrefresh ranges from config file
+[ 40549.740] (II) intel(0): Printing DDC gathered Modelines:
+[ 40549.740] (II) intel(0): Modeline "1680x1050"x0.0  146.00  1680 1960 2136 2240  1050 1053 1059 1089 -hsync +vsync (65.2 kHz eP)
+[ 40549.740] (II) intel(0): Modeline "800x600"x0.0   40.00  800 840 968 1056  600 601 605 628 +hsync +vsync (37.9 kHz e)
+[ 40549.740] (II) intel(0): Modeline "800x600"x0.0   36.00  800 824 896 1024  600 601 603 625 +hsync +vsync (35.2 kHz e)
+[ 40549.740] (II) intel(0): Modeline "640x480"x0.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz e)
+[ 40549.740] (II) intel(0): Modeline "640x480"x0.0   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz e)
+[ 40549.740] (II) intel(0): Modeline "640x480"x0.0   30.24  640 704 768 864  480 483 486 525 -hsync -vsync (35.0 kHz e)
+[ 40549.740] (II) intel(0): Modeline "640x480"x0.0   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz e)
+[ 40549.740] (II) intel(0): Modeline "720x400"x0.0   28.32  720 738 846 900  400 412 414 449 -hsync +vsync (31.5 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1280x1024"x0.0  135.00  1280 1296 1440 1688  1024 1025 1028 1066 +hsync +vsync (80.0 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1024x768"x0.0   78.75  1024 1040 1136 1312  768 769 772 800 +hsync +vsync (60.0 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1024x768"x0.0   75.00  1024 1048 1184 1328  768 771 777 806 -hsync -vsync (56.5 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1024x768"x0.0   65.00  1024 1048 1184 1344  768 771 777 806 -hsync -vsync (48.4 kHz e)
+[ 40549.740] (II) intel(0): Modeline "832x624"x0.0   57.28  832 864 928 1152  624 625 628 667 -hsync -vsync (49.7 kHz e)
+[ 40549.740] (II) intel(0): Modeline "800x600"x0.0   49.50  800 816 896 1056  600 601 604 625 +hsync +vsync (46.9 kHz e)
+[ 40549.740] (II) intel(0): Modeline "800x600"x0.0   50.00  800 856 976 1040  600 637 643 666 +hsync +vsync (48.1 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1152x864"x0.0  108.00  1152 1216 1344 1600  864 865 868 900 +hsync +vsync (67.5 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1280x960"x0.0  108.00  1280 1376 1488 1800  960 961 964 1000 +hsync +vsync (60.0 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1280x1024"x0.0  108.00  1280 1328 1440 1688  1024 1025 1028 1066 +hsync +vsync (64.0 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1440x900"x0.0  106.50  1440 1520 1672 1904  900 903 909 934 -hsync +vsync (55.9 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1680x1050"x0.0  146.25  1680 1784 1960 2240  1050 1053 1059 1089 -hsync +vsync (65.3 kHz e)
+[ 40549.740] (II) intel(0): Modeline "1280x800"x0.0   83.50  1280 1352 1480 1680  800 803 809 831 -hsync +vsync (49.7 kHz e)
+[ 40569.752] (II) AIGLX: Suspending AIGLX clients for VT switch
+[ 40569.796] (II) evdev: ImPS/2 Generic Wheel Mouse: Close
+[ 40569.796] (II) UnloadModule: "evdev"
+[ 40569.796] (II) evdev: AT Translated Set 2 keyboard: Close
+[ 40569.796] (II) UnloadModule: "evdev"
+[ 40569.796] (II) evdev: Eee PC WMI hotkeys: Close
+[ 40569.796] (II) UnloadModule: "evdev"
+[ 40569.796] (II) evdev: Power Button: Close
+[ 40569.796] (II) UnloadModule: "evdev"
+[ 40569.796] (II) evdev: Video Bus: Close
+[ 40569.796] (II) UnloadModule: "evdev"
+[ 40569.796] (II) evdev: Power Button: Close
+[ 40569.796] (II) UnloadModule: "evdev"
+[ 40569.801] Server terminated successfully (0). Closing log file.

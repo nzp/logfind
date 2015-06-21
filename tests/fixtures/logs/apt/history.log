@@ -1,0 +1,63 @@
+
+Start-Date: 2015-06-05  16:20:59
+Commandline: aptdaemon role='role-commit-packages' sender=':1.85'
+Upgrade: apt:amd64 (1.0.1ubuntu2.7, 1.0.1ubuntu2.8), libqt4-xml:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt4-network:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libssl1.0.0:amd64 (1.0.1f-1ubuntu2.11, 1.0.1f-1ubuntu2.12), libssl1.0.0:i386 (1.0.1f-1ubuntu2.11, 1.0.1f-1ubuntu2.12), libqt4-sql:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), apt-transport-https:amd64 (1.0.1ubuntu2.7, 1.0.1ubuntu2.8), libqt5sql5-sqlite:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), libqt5opengl5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), qdbus:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqtcore4:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), t1utils:amd64 (1.37-2ubuntu1, 1.37-2ubuntu1.1), libqt4-svg:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt4-dbus:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt4-xmlpatterns:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt4-sql-sqlite:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt4-opengl:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt4-script:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt5sql5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), libqt5core5a:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), libqt5xml5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), libqt5test5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), libqt4-designer:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt5printsupport5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), qtcore4-l10n:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libreoffice-help-en-us:amd64 (4.2.7-0ubuntu1, 4.2.8-0ubuntu1), libqtdbus4:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libssl-dev:amd64 (1.0.1f-1ubuntu2.11, 1.0.1f-1ubuntu2.12), libqt4-test:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt5widgets5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), libqt4-scripttools:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libssl-doc:amd64 (1.0.1f-1ubuntu2.11, 1.0.1f-1ubuntu2.12), heroku-toolbelt:amd64 (3.37.3, 3.37.6), libqt5dbus5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), openssl:amd64 (1.0.1f-1ubuntu2.11, 1.0.1f-1ubuntu2.12), heroku:amd64 (3.37.3, 3.37.6), libqt5gui5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), libqt5network5:amd64 (5.2.1+dfsg-1ubuntu14.2, 5.2.1+dfsg-1ubuntu14.3), libqtgui4:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt4-declarative:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1), libqt4-help:amd64 (4.8.5+git192-g085f851+dfsg-2ubuntu4, 4.8.5+git192-g085f851+dfsg-2ubuntu4.1)
+Error: Sub-process /usr/bin/dpkg returned an error code (1)
+End-Date: 2015-06-05  16:22:40
+
+Start-Date: 2015-06-06  14:24:24
+Commandline: apt-get upgrade
+Upgrade: sagemath-upstream-binary:amd64 (6.7ppa7, 6.7ppa10revert6.6.aims6-2), libnautilus-extension1a:amd64 (3.10.1-0ubuntu9.7, 3.10.1-0ubuntu9.8), apt-utils:amd64 (1.0.1ubuntu2.7, 1.0.1ubuntu2.8), libapt-inst1.5:amd64 (1.0.1ubuntu2.7, 1.0.1ubuntu2.8), nautilus:amd64 (3.10.1-0ubuntu9.7, 3.10.1-0ubuntu9.8), libapt-pkg4.12:amd64 (1.0.1ubuntu2.7, 1.0.1ubuntu2.8), nautilus-data:amd64 (3.10.1-0ubuntu9.7, 3.10.1-0ubuntu9.8)
+End-Date: 2015-06-06  14:32:05
+
+Start-Date: 2015-06-06  15:20:50
+Commandline: apt-get install ruby2.0
+Install: ruby2.0:amd64 (2.0.0.484-1ubuntu2.2), libruby2.0:amd64 (2.0.0.484-1ubuntu2.2, automatic), rubygems-integration:amd64 (1.5, automatic)
+End-Date: 2015-06-06  15:21:05
+
+Start-Date: 2015-06-06  15:38:56
+Commandline: apt-get install ruby2.0-dev
+Install: ruby2.0-dev:amd64 (2.0.0.484-1ubuntu2.2)
+End-Date: 2015-06-06  15:38:58
+
+Start-Date: 2015-06-06  15:51:18
+Commandline: apt-get install nodejs
+Install: libv8-3.14.5:amd64 (3.14.5.8-5ubuntu2, automatic), nodejs:amd64 (0.10.25~dfsg2-2ubuntu1), libc-ares2:amd64 (1.10.0-2, automatic)
+End-Date: 2015-06-06  15:51:27
+
+Start-Date: 2015-06-10  19:57:40
+Commandline: apt-get upgrade
+Upgrade: gvfs-bin:amd64 (1.20.3-0ubuntu1, 1.20.3-0ubuntu1.1), gvfs-common:amd64 (1.20.3-0ubuntu1, 1.20.3-0ubuntu1.1), chromium-codecs-ffmpeg-extra:amd64 (41.0.2272.76-0ubuntu0.14.04.1.1076, 43.0.2357.81-0ubuntu0.14.04.1.1089), flashplugin-installer:amd64 (11.2.202.460ubuntu0.14.04.1, 11.2.202.466ubuntu0.14.04.1), gvfs-daemons:amd64 (1.20.3-0ubuntu1, 1.20.3-0ubuntu1.1), chromium-browser-l10n:amd64 (41.0.2272.76-0ubuntu0.14.04.1.1076, 43.0.2357.81-0ubuntu0.14.04.1.1089), gvfs-fuse:amd64 (1.20.3-0ubuntu1, 1.20.3-0ubuntu1.1), gvfs:amd64 (1.20.3-0ubuntu1, 1.20.3-0ubuntu1.1), gvfs-backends:amd64 (1.20.3-0ubuntu1, 1.20.3-0ubuntu1.1), fonts-droid:amd64 (4.3-3ubuntu1.1, 4.3-3ubuntu1.2), gvfs-libs:amd64 (1.20.3-0ubuntu1, 1.20.3-0ubuntu1.1), chromium-browser:amd64 (41.0.2272.76-0ubuntu0.14.04.1.1076, 43.0.2357.81-0ubuntu0.14.04.1.1089)
+End-Date: 2015-06-10  19:59:06
+
+Start-Date: 2015-06-12  21:51:41
+Commandline: aptdaemon role='role-commit-packages' sender=':1.86'
+Install: linux-image-extra-3.13.0-54-generic:amd64 (3.13.0-54.91), linux-image-3.13.0-54-generic:amd64 (3.13.0-54.91), linux-headers-3.13.0-54-generic:amd64 (3.13.0-54.91), linux-headers-3.13.0-54:amd64 (3.13.0-54.91)
+Upgrade: linux-headers-generic:amd64 (3.13.0.53.60, 3.13.0.54.61), postgresql-9.3:amd64 (9.3.7-0ubuntu0.14.04, 9.3.8-0ubuntu0.4.04), cups-core-drivers:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), cups-server-common:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), libssl1.0.0:amd64 (1.0.1f-1ubuntu2.12, 1.0.1f-1ubuntu2.15), libssl1.0.0:i386 (1.0.1f-1ubuntu2.12, 1.0.1f-1ubuntu2.15), libcups2:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), libcups2:i386 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), cups-daemon:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), libcupsmime1:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), cups-client:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), libcupsimage2:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), libnuma1:amd64 (2.0.9~rc5-1ubuntu3, 2.0.9~rc5-1ubuntu3.14.04.1), cups:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), postgresql-contrib-9.3:amd64 (9.3.7-0ubuntu0.14.04, 9.3.8-0ubuntu0.4.04), postgresql-client-9.3:amd64 (9.3.7-0ubuntu0.14.04, 9.3.8-0ubuntu0.4.04), cups-bsd:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), libssl-dev:amd64 (1.0.1f-1ubuntu2.12, 1.0.1f-1ubuntu2.15), libpq-dev:amd64 (9.3.7-0ubuntu0.14.04, 9.3.8-0ubuntu0.4.04), libcupscgi1:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), libgnutls28:amd64 (3.2.11-2ubuntu1, 3.2.11-2ubuntu1.1), libcupsppdc1:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), libssl-doc:amd64 (1.0.1f-1ubuntu2.12, 1.0.1f-1ubuntu2.15), cups-common:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), heroku-toolbelt:amd64 (3.37.6, 3.37.7), openssl:amd64 (1.0.1f-1ubuntu2.12, 1.0.1f-1ubuntu2.15), heroku:amd64 (3.37.6, 3.37.7), cups-ppdc:amd64 (1.7.2-0ubuntu1.5, 1.7.2-0ubuntu1.6), linux-libc-dev:amd64 (3.13.0-53.89, 3.13.0-54.91), libpq5:amd64 (9.3.7-0ubuntu0.14.04, 9.3.8-0ubuntu0.4.04), linux-image-generic:amd64 (3.13.0.53.60, 3.13.0.54.61), linux-generic:amd64 (3.13.0.53.60, 3.13.0.54.61)
+End-Date: 2015-06-12  21:54:49
+
+Start-Date: 2015-06-15  10:03:17
+Commandline: aptdaemon role='role-commit-packages' sender=':1.119'
+Upgrade: sagemath-upstream-binary:amd64 (6.7ppa10revert6.6.aims6-2, 6.7ppa23), unity:amd64 (7.2.5+14.04.20150521.1-0ubuntu1, 7.2.5+14.04.20150603-0ubuntu1), libunity-core-6.0-9:amd64 (7.2.5+14.04.20150521.1-0ubuntu1, 7.2.5+14.04.20150603-0ubuntu1), unity-services:amd64 (7.2.5+14.04.20150521.1-0ubuntu1, 7.2.5+14.04.20150603-0ubuntu1)
+End-Date: 2015-06-15  10:07:42
+
+Start-Date: 2015-06-16  09:42:27
+Commandline: aptdaemon role='role-commit-packages' sender=':1.219'
+Install: linux-image-extra-3.13.0-55-generic:amd64 (3.13.0-55.92), linux-headers-3.13.0-55:amd64 (3.13.0-55.92), linux-image-3.13.0-55-generic:amd64 (3.13.0-55.92), linux-headers-3.13.0-55-generic:amd64 (3.13.0-55.92)
+Upgrade: linux-headers-generic:amd64 (3.13.0.54.61, 3.13.0.55.62), libapparmor1:amd64 (2.8.95~2430-0ubuntu5.1, 2.8.95~2430-0ubuntu5.2), libapparmor-perl:amd64 (2.8.95~2430-0ubuntu5.1, 2.8.95~2430-0ubuntu5.2), heroku-toolbelt:amd64 (3.37.7, 3.38.1), apparmor:amd64 (2.8.95~2430-0ubuntu5.1, 2.8.95~2430-0ubuntu5.2), heroku:amd64 (3.37.7, 3.38.1), linux-libc-dev:amd64 (3.13.0-54.91, 3.13.0-55.92), linux-image-generic:amd64 (3.13.0.54.61, 3.13.0.55.62), dh-apparmor:amd64 (2.8.95~2430-0ubuntu5.1, 2.8.95~2430-0ubuntu5.2), linux-generic:amd64 (3.13.0.54.61, 3.13.0.55.62)
+End-Date: 2015-06-16  09:46:02
+
+Start-Date: 2015-06-17  09:26:30
+Commandline: aptdaemon role='role-commit-packages' sender=':1.124'
+Upgrade: initscripts:amd64 (2.88dsf-41ubuntu6.1, 2.88dsf-41ubuntu6.2), aptdaemon-data:amd64 (1.1.1-1ubuntu5.1, 1.1.1-1ubuntu5.2), python-aptdaemon.gtk3widgets:amd64 (1.1.1-1ubuntu5.1, 1.1.1-1ubuntu5.2), python3-aptdaemon.gtk3widgets:amd64 (1.1.1-1ubuntu5.1, 1.1.1-1ubuntu5.2), python3-aptdaemon.pkcompat:amd64 (1.1.1-1ubuntu5.1, 1.1.1-1ubuntu5.2), sysv-rc:amd64 (2.88dsf-41ubuntu6.1, 2.88dsf-41ubuntu6.2), python-aptdaemon:amd64 (1.1.1-1ubuntu5.1, 1.1.1-1ubuntu5.2), aptdaemon:amd64 (1.1.1-1ubuntu5.1, 1.1.1-1ubuntu5.2), wpasupplicant:amd64 (2.1-0ubuntu1.2, 2.1-0ubuntu1.3), python3-aptdaemon:amd64 (1.1.1-1ubuntu5.1, 1.1.1-1ubuntu5.2), sysvinit-utils:amd64 (2.88dsf-41ubuntu6.1, 2.88dsf-41ubuntu6.2)
+End-Date: 2015-06-17  09:27:22
+
+Start-Date: 2015-06-19  10:49:56
+Commandline: aptdaemon role='role-commit-packages' sender=':1.289'
+Upgrade: binutils:amd64 (2.24-5ubuntu3.1, 2.24-5ubuntu13)
+End-Date: 2015-06-19  10:50:35
+
+Start-Date: 2015-06-21  15:12:30
+Commandline: aptdaemon role='role-commit-packages' sender=':1.86'
+Upgrade: libstdc++-4.8-dev:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), gir1.2-udisks-2.0:amd64 (2.1.3-1, 2.1.3-1ubuntu0.1), libasan0:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), libquadmath0:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), gcc-4.8-base:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), gcc-4.8-base:i386 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), cpp-4.8:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), libgomp1:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), libtsan0:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), udisks2:amd64 (2.1.3-1, 2.1.3-1ubuntu0.1), libatomic1:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), gfortran-4.8:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), g++-4.8:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), linux-image-extra-3.13.0-55-generic:amd64 (3.13.0-55.92, 3.13.0-55.94), linux-headers-3.13.0-55:amd64 (3.13.0-55.92, 3.13.0-55.94), linux-image-3.13.0-55-generic:amd64 (3.13.0-55.92, 3.13.0-55.94), libgcc-4.8-dev:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), gcc-4.8:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), linux-headers-3.13.0-55-generic:amd64 (3.13.0-55.92, 3.13.0-55.94), libgfortran3:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), heroku-toolbelt:amd64 (3.38.1, 3.38.3), heroku:amd64 (3.38.1, 3.38.3), libgfortran-4.8-dev:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), linux-libc-dev:amd64 (3.13.0-55.92, 3.13.0-55.94), libstdc++6:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), libstdc++6:i386 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04), libudisks2-0:amd64 (2.1.3-1, 2.1.3-1ubuntu0.1), libitm1:amd64 (4.8.2-19ubuntu1, 4.8.4-2ubuntu1~14.04)
+End-Date: 2015-06-21  15:14:44

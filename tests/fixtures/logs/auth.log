@@ -1,0 +1,77 @@
+Jun 21 08:05:44 sputnjik pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Jun 21 08:05:44 sputnjik pkexec: pam_ck_connector(polkit-1:session): cannot determine display-device
+Jun 21 08:05:44 sputnjik pkexec[16672]: nzp: Executing command [USER=root] [TTY=unknown] [CWD=/home/nzp] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jun 21 08:17:02 sputnjik CRON[16768]: pam_unix(cron:session): session opened for user root by (uid=0)
+Jun 21 08:17:02 sputnjik CRON[16768]: pam_unix(cron:session): session closed for user root
+Jun 21 09:17:02 sputnjik CRON[16914]: pam_unix(cron:session): session opened for user root by (uid=0)
+Jun 21 09:17:02 sputnjik CRON[16914]: pam_unix(cron:session): session closed for user root
+Jun 21 10:17:01 sputnjik CRON[17048]: pam_unix(cron:session): session opened for user root by (uid=0)
+Jun 21 10:17:01 sputnjik CRON[17048]: pam_unix(cron:session): session closed for user root
+Jun 21 11:17:01 sputnjik CRON[17191]: pam_unix(cron:session): session opened for user root by (uid=0)
+Jun 21 11:17:01 sputnjik CRON[17191]: pam_unix(cron:session): session closed for user root
+Jun 21 12:00:01 sputnjik CRON[17294]: pam_unix(cron:session): session opened for user nzp by (uid=0)
+Jun 21 12:00:12 sputnjik CRON[17294]: pam_unix(cron:session): session closed for user nzp
+Jun 21 12:17:01 sputnjik CRON[17340]: pam_unix(cron:session): session opened for user root by (uid=0)
+Jun 21 12:17:01 sputnjik CRON[17340]: pam_unix(cron:session): session closed for user root
+Jun 21 13:17:02 sputnjik CRON[17488]: pam_unix(cron:session): session opened for user root by (uid=0)
+Jun 21 13:17:02 sputnjik CRON[17488]: pam_unix(cron:session): session closed for user root
+Jun 21 14:17:04 sputnjik CRON[17795]: pam_unix(cron:session): session opened for user root by (uid=0)
+Jun 21 14:17:04 sputnjik CRON[17795]: pam_unix(cron:session): session closed for user root
+Jun 21 15:07:39 sputnjik systemd-logind[1048]: New seat seat0.
+Jun 21 15:07:39 sputnjik systemd-logind[1048]: Watching system buttons on /dev/input/event1 (Power Button)
+Jun 21 15:07:39 sputnjik systemd-logind[1048]: Watching system buttons on /dev/input/event3 (Video Bus)
+Jun 21 15:07:39 sputnjik systemd-logind[1048]: Watching system buttons on /dev/input/event0 (Power Button)
+Jun 21 15:07:48 sputnjik lightdm: PAM unable to dlopen(pam_kwallet.so): /lib/security/pam_kwallet.so: cannot open shared object file: No such file or directory
+Jun 21 15:07:48 sputnjik lightdm: PAM adding faulty module: pam_kwallet.so
+Jun 21 15:07:48 sputnjik lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Jun 21 15:07:48 sputnjik systemd-logind[1048]: New session c1 of user lightdm.
+Jun 21 15:07:48 sputnjik systemd-logind[1048]: Linked /tmp/.X11-unix/X0 to /run/user/110/X11-display.
+Jun 21 15:07:48 sputnjik lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Jun 21 15:07:52 sputnjik lightdm: PAM unable to dlopen(pam_kwallet.so): /lib/security/pam_kwallet.so: cannot open shared object file: No such file or directory
+Jun 21 15:07:52 sputnjik lightdm: PAM adding faulty module: pam_kwallet.so
+Jun 21 15:07:52 sputnjik lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "nzp"
+Jun 21 15:09:35 sputnjik lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Jun 21 15:09:35 sputnjik lightdm: pam_unix(lightdm:session): session opened for user nzp by (uid=0)
+Jun 21 15:09:35 sputnjik systemd-logind[1048]: New session c2 of user nzp.
+Jun 21 15:09:35 sputnjik systemd-logind[1048]: Linked /tmp/.X11-unix/X0 to /run/user/1000/X11-display.
+Jun 21 15:09:35 sputnjik lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Jun 21 15:09:37 sputnjik gnome-keyring-daemon[1982]: couldn't set environment variable in session: The name org.gnome.SessionManager was not provided by any .service files
+Jun 21 15:09:37 sputnjik gnome-keyring-daemon[1982]: message repeated 2 times: [ couldn't set environment variable in session: The name org.gnome.SessionManager was not provided by any .service files]
+Jun 21 15:09:43 sputnjik gnome-keyring-daemon[1982]: The GPG agent was already initialized
+Jun 21 15:09:43 sputnjik gnome-keyring-daemon[1982]: The PKCS#11 component was already initialized
+Jun 21 15:09:43 sputnjik gnome-keyring-daemon[1982]: The Secret Service was already initialized
+Jun 21 15:09:43 sputnjik gnome-keyring-daemon[1982]: The SSH agent was already initialized
+Jun 21 15:09:45 sputnjik polkitd(authority=local): Registered Authentication Agent for unix-session:c2 (system bus name :1.74 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jun 21 15:10:02 sputnjik systemd-logind[1048]: Removed session c1.
+Jun 21 15:10:49 sputnjik pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
+Jun 21 15:10:49 sputnjik pkexec: pam_ck_connector(polkit-1:session): cannot determine display-device
+Jun 21 15:10:49 sputnjik pkexec[2602]: nzp: Executing command [USER=root] [TTY=unknown] [CWD=/home/nzp] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jun 21 15:16:25 sputnjik polkitd(authority=local): Unregistered Authentication Agent for unix-session:c2 (system bus name :1.74, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Jun 21 15:16:25 sputnjik systemd-logind[1048]: System is rebooting.
+Jun 21 15:17:29 sputnjik systemd-logind[1029]: New seat seat0.
+Jun 21 15:17:29 sputnjik systemd-logind[1029]: Watching system buttons on /dev/input/event1 (Power Button)
+Jun 21 15:17:29 sputnjik systemd-logind[1029]: Watching system buttons on /dev/input/event3 (Video Bus)
+Jun 21 15:17:29 sputnjik systemd-logind[1029]: Watching system buttons on /dev/input/event0 (Power Button)
+Jun 21 15:17:38 sputnjik lightdm: PAM unable to dlopen(pam_kwallet.so): /lib/security/pam_kwallet.so: cannot open shared object file: No such file or directory
+Jun 21 15:17:38 sputnjik lightdm: PAM adding faulty module: pam_kwallet.so
+Jun 21 15:17:38 sputnjik lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Jun 21 15:17:38 sputnjik systemd-logind[1029]: New session c1 of user lightdm.
+Jun 21 15:17:38 sputnjik systemd-logind[1029]: Linked /tmp/.X11-unix/X0 to /run/user/110/X11-display.
+Jun 21 15:17:38 sputnjik lightdm: pam_ck_connector(lightdm-greeter:session): nox11 mode, ignoring PAM_TTY :0
+Jun 21 15:17:41 sputnjik lightdm: PAM unable to dlopen(pam_kwallet.so): /lib/security/pam_kwallet.so: cannot open shared object file: No such file or directory
+Jun 21 15:17:41 sputnjik lightdm: PAM adding faulty module: pam_kwallet.so
+Jun 21 15:17:41 sputnjik lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "nzp"
+Jun 21 15:17:50 sputnjik lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Jun 21 15:17:50 sputnjik lightdm: pam_unix(lightdm:session): session opened for user nzp by (uid=0)
+Jun 21 15:17:50 sputnjik systemd-logind[1029]: New session c2 of user nzp.
+Jun 21 15:17:50 sputnjik systemd-logind[1029]: Linked /tmp/.X11-unix/X0 to /run/user/1000/X11-display.
+Jun 21 15:17:50 sputnjik lightdm: pam_ck_connector(lightdm:session): nox11 mode, ignoring PAM_TTY :0
+Jun 21 15:17:51 sputnjik gnome-keyring-daemon[1902]: couldn't set environment variable in session: The name org.gnome.SessionManager was not provided by any .service files
+Jun 21 15:17:52 sputnjik gnome-keyring-daemon[1902]: message repeated 2 times: [ couldn't set environment variable in session: The name org.gnome.SessionManager was not provided by any .service files]
+Jun 21 15:17:58 sputnjik gnome-keyring-daemon[1902]: The GPG agent was already initialized
+Jun 21 15:17:58 sputnjik gnome-keyring-daemon[1902]: The PKCS#11 component was already initialized
+Jun 21 15:17:58 sputnjik gnome-keyring-daemon[1902]: The Secret Service was already initialized
+Jun 21 15:17:58 sputnjik gnome-keyring-daemon[1902]: The SSH agent was already initialized
+Jun 21 15:18:01 sputnjik polkitd(authority=local): Registered Authentication Agent for unix-session:c2 (system bus name :1.73 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jun 21 15:18:17 sputnjik systemd-logind[1029]: Removed session c1.
+Jun 21 15:18:42 sputnjik gnome-keyring-daemon[1902]: keyring alias directory: /home/nzp/.local/share/keyrings

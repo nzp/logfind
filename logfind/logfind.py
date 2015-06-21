@@ -6,7 +6,7 @@ import os
 import re
 
 
-def list_filepath_regexes():
+def list_filepath_regexes(config_dir):
     """Get the list of files to process.
 
     The input is a file listing the file paths, specified as regular
@@ -14,10 +14,12 @@ def list_filepath_regexes():
     stripped.  Blank lines are ignored.  Lines beginning with `#` are comments
     and are ignored.
 
+    :param config_dir: directory in which to look for config file
+    :type config_dir: string
     :rtype: list of strings (filepath regexes)
 
     """
-    logfile_filepath = os.path.expanduser("~/.logfind")
+    logfile_filepath = "{}/.logfind".format(config_dir)
 
     blank_line = re.compile(r"^\s+$")
     comment_line = re.compile(r"^#.*$")
@@ -50,7 +52,7 @@ def get_paths(regex, root="/"):
     # Since string.split() gives "" as the first element of the list in this
     # case (because of the leading separator), we just discard it.
     re_parts = regex.split("/")
-    del re_parts[0] 
+    del re_parts[0]
 
     for directory, children, filenames in os.walk(root):
         # When there is only 1 part left, we can't do any additional filtering.
