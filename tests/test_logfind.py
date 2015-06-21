@@ -72,21 +72,21 @@ class FindFilesTestCase(unittest.TestCase):
         # First member of the tuple is the RE, second is the list of paths
         # it matches.
         test_data = [
-            ("{}/var/log/a.*\.log$".format(TEST_FILESYSTEM_ROOT), [
-                "{}/var/log/apport.log".format(TEST_FILESYSTEM_ROOT),
-                "{}/var/log/alternatives.log".format(TEST_FILESYSTEM_ROOT),
-                "{}/var/log/auth.log".format(TEST_FILESYSTEM_ROOT),
-                "{}/var/log/apt/term.log".format(TEST_FILESYSTEM_ROOT),
-                "{}/var/log/apt/history.log".format(TEST_FILESYSTEM_ROOT),
+            ("{}/a.*\.log$".format(TEST_LOG_DIR), [
+                "{}/apport.log".format(TEST_LOG_DIR),
+                "{}/alternatives.log".format(TEST_LOG_DIR),
+                "{}/auth.log".format(TEST_LOG_DIR),
+                "{}/apt/term.log".format(TEST_LOG_DIR),
+                "{}/apt/history.log".format(TEST_LOG_DIR),
                 ]
             ),
-            ("{}/var/log/Xorg\.\d+\.log$".format(TEST_FILESYSTEM_ROOT), [
-                "{}/var/log/Xorg.0.log".format(TEST_FILESYSTEM_ROOT),
-                "{}/var/log/Xorg.1.log".format(TEST_FILESYSTEM_ROOT),
+            ("{}/Xorg\.\d+\.log$".format(TEST_LOG_DIR), [
+                "{}/Xorg.0.log".format(TEST_LOG_DIR),
+                "{}/Xorg.1.log".format(TEST_LOG_DIR),
                 ]
             ),
-            ("{}/var/log/m.*\.\d$".format(TEST_FILESYSTEM_ROOT), [
-                "{}/var/log/mail.log.1".format(TEST_FILESYSTEM_ROOT),
+            ("{}/m.*\.\d$".format(TEST_LOG_DIR), [
+                "{}/mail.log.1".format(TEST_LOG_DIR),
                 ]
             ),
         ]
@@ -100,7 +100,25 @@ class FinderTestCase(unittest.TestCase):
 
     def test_finder_and(self):
         """Test searching ANDed regexes."""
-        pass
+
+        search_files = [
+                "{}/testlog.1".format(TEST_LOG_DIR),
+                "{}/testlog.2".format(TEST_LOG_DIR),
+                "{}/testlog.3".format(TEST_LOG_DIR),
+                ]
+        search_regexes = [
+                r"one",
+                r"two",
+                r"three",
+                r"Ge.+\sWhee.*:.*$",
+                ]
+        test_result = [
+                "{}/testlog.1".format(TEST_LOG_DIR),
+                "{}/testlog.2".format(TEST_LOG_DIR),
+                ]
+        result = logfind.finder(search_files, search_regexes)
+
+        self.assertEqual(test_result, result)
 
 
 if __name__ == "__main__":

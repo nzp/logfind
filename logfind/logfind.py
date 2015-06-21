@@ -38,6 +38,7 @@ def get_paths(regex, root="/"):
     :type root: string
     :param regex: regular expression to match against
     :rtype: list of strings (matched filepaths)
+
     """
     cre = re.compile(regex)
     path_list = []
@@ -73,4 +74,42 @@ def get_paths(regex, root="/"):
                 path_list.append(path)
 
     return path_list
+
+
+def finder(search_files, search_regexes, anded=True):
+    """Find given regexes in given files.
+
+    :param search_files: files to search through
+    :type search_files: list of strings (filepaths)
+    :param search_regexes: regexes to search for
+    :type search_regexes: list of strings (regexes)
+    :param anded: should the search terms be ANDed, if not OR them
+    :type anded: bool
+    :rtype: list of strings (filepaths that match)
+    
+    """
+    compiled_regexes = [re.compile(r"{}".format(regex)) for regex
+                        in search_regexes]
+    matched_files = []
+    match_tally = []  # The tally of current file.
+
+    def _read_files():
+        for f in search_files:
+            with open(f, "r") as infile:
+                yield (unicode(infile.readlines()), f)
+
+    for text, path in _read_files():
+        match_tally[:] = []
+        for r in compiled_regexes:
+            match_tally.append(bool(r.search(text)))
+
+        if not (False in match_tally):
+            matched_files.append(path)
+
+    return matched_files
+
+
+
+
+
 
