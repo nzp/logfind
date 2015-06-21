@@ -72,27 +72,24 @@ class FindFilesTestCase(unittest.TestCase):
         # First member of the tuple is the RE, second is the list of paths
         # it matches.
         test_data = [
-                ("{}/var/log/a.*\.log$".format(TEST_FILESYSTEM_ROOT),
-                    [
-                        "{}/var/log/apport.log".format(TEST_FILESYSTEM_ROOT),
-                        "{}/var/log/alternatives.log".format(TEST_FILESYSTEM_ROOT),
-                        "{}/var/log/auth.log".format(TEST_FILESYSTEM_ROOT),
-                        "{}/var/log/apt/term.log".format(TEST_FILESYSTEM_ROOT),
-                        "{}/var/log/apt/history.log".format(TEST_FILESYSTEM_ROOT),
-                        ]
-                ),
-                ("{}/var/log/Xorg\.\d+\.log$".format(TEST_FILESYSTEM_ROOT),
-                    [
-                        "{}/var/log/Xorg.0.log".format(TEST_FILESYSTEM_ROOT),
-                        "{}/var/log/Xorg.1.log".format(TEST_FILESYSTEM_ROOT),
-                        ]
-                ),
-                ("{}/var/log/m.*\.\d$".format(TEST_FILESYSTEM_ROOT),
-                    [
-                        "{}/var/log/mail.log.1".format(TEST_FILESYSTEM_ROOT),
-                        ]
-                )
-            ]
+            ("{}/var/log/a.*\.log$".format(TEST_FILESYSTEM_ROOT), [
+                "{}/var/log/apport.log".format(TEST_FILESYSTEM_ROOT),
+                "{}/var/log/alternatives.log".format(TEST_FILESYSTEM_ROOT),
+                "{}/var/log/auth.log".format(TEST_FILESYSTEM_ROOT),
+                "{}/var/log/apt/term.log".format(TEST_FILESYSTEM_ROOT),
+                "{}/var/log/apt/history.log".format(TEST_FILESYSTEM_ROOT),
+                ]
+            ),
+            ("{}/var/log/Xorg\.\d+\.log$".format(TEST_FILESYSTEM_ROOT), [
+                "{}/var/log/Xorg.0.log".format(TEST_FILESYSTEM_ROOT),
+                "{}/var/log/Xorg.1.log".format(TEST_FILESYSTEM_ROOT),
+                ]
+            ),
+            ("{}/var/log/m.*\.\d$".format(TEST_FILESYSTEM_ROOT), [
+                "{}/var/log/mail.log.1".format(TEST_FILESYSTEM_ROOT),
+                ]
+            ),
+        ]
         for case in test_data:
             out_paths = logfind.get_paths(case[0])
             self.assertEquals(case[1], out_paths)
