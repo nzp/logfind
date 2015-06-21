@@ -103,13 +103,12 @@ def finder(search_files, search_regexes, anded=True):
         for r in compiled_regexes:
             match_tally.append(bool(r.search(text)))
 
-        if not (False in match_tally):
-            matched_files.append(path)
+        if anded:
+            if not (False in match_tally):
+                matched_files.append(path)
+        else:
+            if True in match_tally:
+                matched_files.append(path)
 
     return matched_files
-
-
-
-
-
 

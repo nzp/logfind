@@ -98,25 +98,43 @@ class FindFilesTestCase(unittest.TestCase):
 class FinderTestCase(unittest.TestCase):
     """Test `logfind.finder()` finding strings in given files."""
 
+    search_files = [
+            "{}/testlog.1".format(TEST_LOG_DIR),
+            "{}/testlog.2".format(TEST_LOG_DIR),
+            "{}/testlog.3".format(TEST_LOG_DIR),
+            ]
+
     def test_finder_and(self):
         """Test searching ANDed regexes."""
 
-        search_files = [
-                "{}/testlog.1".format(TEST_LOG_DIR),
-                "{}/testlog.2".format(TEST_LOG_DIR),
-                "{}/testlog.3".format(TEST_LOG_DIR),
-                ]
         search_regexes = [
-                r"one",
-                r"two",
-                r"three",
-                r"Ge.+\sWhee.*:.*$",
+                "one",  # missing in testlog.3
+                "two",
+                "three",
+                "Ge.+\sWhee.*:.*$",
                 ]
         test_result = [
                 "{}/testlog.1".format(TEST_LOG_DIR),
                 "{}/testlog.2".format(TEST_LOG_DIR),
                 ]
-        result = logfind.finder(search_files, search_regexes)
+        result = logfind.finder(self.search_files, search_regexes)
+
+        self.assertEqual(test_result, result)
+
+    def test_finder_or(self):
+        """Test searching ORed regexes."""
+
+        search_regexes = [
+                "klapna",  # in neither file.
+                "lugubrious",  # in testlog.3
+                "craptastic",  # in testlog.3
+                "3Ge.+\sWhee.*:.*$",  # in testlog.2
+                ]
+        test_result = [
+                "{}/testlog.2".format(TEST_LOG_DIR),
+                "{}/testlog.3".format(TEST_LOG_DIR),
+                ]
+        result = logfind.finder(self.search_files, search_regexes, anded=False)
 
         self.assertEqual(test_result, result)
 
