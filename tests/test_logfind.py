@@ -52,13 +52,6 @@ class FindFilesTestCase(unittest.TestCase):
 
         # First member of the tuple is the RE, second is the list of paths
         # it matches.
-        #
-        # XXX: It is important to note that the implementation of get_paths is
-        # practically identical to the code used to get the lists of paths in
-        # test_data, so it's safe to say that, at the moment, get_paths just is
-        # testing itself.  So, test_data needs to be made independent.  This
-        # needs to be done when the all fixture data is made self contained
-        # within tests directory and independent of live files.
         test_data = [
                 ("/var/log/a.*\.log$",
                     [
