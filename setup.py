@@ -15,7 +15,7 @@ config = {
         "license": "BSD 2-Clause",
         "scripts": ["bin/logfind"],
         "data_files": [
-            ("docs", [
+            ("share/doc/logfind", [
                 "README.rst",
                 "LICENSE",
                 ])]
