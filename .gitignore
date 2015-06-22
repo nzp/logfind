@@ -2,3 +2,6 @@
 *.swo
 *.pyc
 *.pyo
+MANIFEST
+dist
+build
