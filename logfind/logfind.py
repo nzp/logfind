@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 import os
 import re
+import codecs
 
 
 def list_filepath_regexes(config_dir):
@@ -88,15 +89,15 @@ def finder(search_files, search_regexes, anded=True):
     :rtype: list of strings (filepaths that match)
     
     """
-    compiled_regexes = [re.compile(r"{}".format(regex)) for regex
-                        in search_regexes]
+    compiled_regexes = [re.compile(r"{}".format(regex), flags=re.MULTILINE)
+                        for regex in search_regexes]
     matched_files = []
     match_tally = []  # The tally of current file.
 
     def _read_files():
         for f in search_files:
             with open(f, "r") as infile:
-                yield (unicode(infile.readlines()), f)
+                yield (infile.read(), f)
 
     for text, path in _read_files():
         match_tally[:] = []
