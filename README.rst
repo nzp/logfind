@@ -14,12 +14,12 @@ which files to look for the strings.  The format of this file is simple:
 
 To use the program, run::
 
-        logfind [-o] [regex [regex ...]]
+        logfind [-o] regex [regex ...]
 
 String(s) to match are specified as `Python regular expressions`_ just like
 file paths are.
 
-The program has one option:
+The program has one significant option:
 
 -o      Instead of the default regex chaining (logical ``AND``), use logical
         ``OR`` chaining.
