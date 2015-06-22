@@ -1,0 +1,36 @@
+#! python
+
+import os
+import argparse
+import itertools
+
+from logfind import logfind
+
+
+parser = argparse.ArgumentParser(
+        description="Find strings in files using Python regular expressions.")
+
+parser.add_argument(
+        "regexes", nargs="+",
+        help="one or more regular expressions to search for")
+parser.add_argument(
+        "-o", action="store_true",
+        help="chain regular expressions using logical OR (default is AND)")
+parser.add_argument(
+        "-v", "--version", action="version", version="0.1",
+        help="print version number and exit")
+
+args = parser.parse_args()
+
+
+path_regexes = logfind.list_filepath_regexes(os.environ["HOME"])
+
+# The list comprehension will produce list of lists, so flatten it with
+# it.chain...
+files_to_search = list(itertools.chain.from_iterable(
+        [logfind.get_paths(regex) for regex in path_regexes]))
+
+matches = logfind.finder(files_to_search, args.regexes)
+
+print("\n".join(matches))
+
