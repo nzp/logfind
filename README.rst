@@ -11,6 +11,7 @@ which files to look for the strings.  The format of this file is simple:
 2. Paths are specified as `Python regular expressions`_.
 3. Blank lines (lines containing only white space characters) are ignored.
 4. Lines beginning with ``#`` are comments and are also ignored.
+5. Paths can have leading and trailing white space, which is stripped.
 
 To use the program, run::
 
