@@ -11,8 +11,8 @@ parser = argparse.ArgumentParser(
         description="Find strings in files using Python regular expressions.")
 
 parser.add_argument(
-        "regexes", nargs="+",
-        help="one or more regular expressions to search for")
+        "regex", nargs="+",
+        help="regular expression(s) to search for")
 parser.add_argument(
         "-o", action="store_true",
         help="chain regular expressions using logical OR (default is AND)")
@@ -31,9 +31,9 @@ files_to_search = list(itertools.chain.from_iterable(
         [logfind.get_paths(regex) for regex in path_regexes]))
 
 if args.o:
-    matches = logfind.finder(files_to_search, args.regexes, anded=False)
+    matches = logfind.finder(files_to_search, args.regex, anded=False)
 else:
-    matches = logfind.finder(files_to_search, args.regexes)
+    matches = logfind.finder(files_to_search, args.regex)
 
 print("\n".join(matches))
 
