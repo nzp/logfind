@@ -96,7 +96,7 @@ def finder(search_files, search_regexes, anded=True):
 
     def _read_files():
         for f in search_files:
-            with open(f, "r") as infile:
+            with codecs.open(f, "r", "utf-8") as infile:
                 yield (infile.read(), f)
 
     for text, path in _read_files():
