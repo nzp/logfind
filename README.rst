@@ -27,5 +27,9 @@ The program has one option:
 The output is a list of file paths containing the specified regular
 expression(s), each on a separate line.
 
+If you get errors along the lines of ``UnicodeDecodeError``, invalid start
+byte, etc. make sure your path regular expressions aren't hitting binary files
+like gzipped log archives and so on.
+
 
 .. _Python regular expressions: https://docs.python.org/2/howto/regex.html
