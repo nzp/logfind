@@ -30,7 +30,10 @@ path_regexes = logfind.list_filepath_regexes(os.environ["HOME"])
 files_to_search = list(itertools.chain.from_iterable(
         [logfind.get_paths(regex) for regex in path_regexes]))
 
-matches = logfind.finder(files_to_search, args.regexes)
+if args.o:
+    matches = logfind.finder(files_to_search, args.regexes, anded=False)
+else:
+    matches = logfind.finder(files_to_search, args.regexes)
 
 print("\n".join(matches))
 
