@@ -1,7 +1,7 @@
 Prefind
 ========
 A simple grep-like tool to find files containing one or more strings.  Prefind
-[*]_ **find**\ s **P**\ ython **re**\ gular expressions in **pre**\ defined
+[*]_ **find**\ s **P**\ ython **re**\ gular expressions in a **pre**\ defined
 list of file paths (specified as Python regular expressions).
 
 Usage
