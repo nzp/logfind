@@ -1,10 +1,10 @@
-Logfind
+Prefind
 ========
 A simple grep-like tool to find files containing one or more strings.
 
 Usage
 ------
-Logfind reads configuration from ``~/.logfind`` (by default) to figure out in
+Prefind reads configuration from ``~/.prefind`` (by default) to figure out in
 which files to look for the strings.  The format of this file is simple:
 
 1. Each *absolute* file path on a line by itself.
@@ -15,7 +15,7 @@ which files to look for the strings.  The format of this file is simple:
 
 To use the program, run::
 
-        logfind [-o] regex [regex ...]
+        prefind [-o] regex [regex ...]
 
 String(s) to match are specified as `Python regular expressions`_ just like
 file paths are.

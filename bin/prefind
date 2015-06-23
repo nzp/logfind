@@ -4,7 +4,7 @@ import os
 import argparse
 import itertools
 
-from logfind import logfind
+from prefind import prefind
 
 
 parser = argparse.ArgumentParser(
@@ -23,17 +23,17 @@ parser.add_argument(
 args = parser.parse_args()
 
 
-path_regexes = logfind.list_filepath_regexes(os.environ["HOME"])
+path_regexes = prefind.list_filepath_regexes(os.environ["HOME"])
 
 # The list comprehension will produce list of lists, so flatten it with
 # it.chain...
 files_to_search = list(itertools.chain.from_iterable(
-        [logfind.get_paths(regex) for regex in path_regexes]))
+        [prefind.get_paths(regex) for regex in path_regexes]))
 
 if args.o:
-    matches = logfind.finder(files_to_search, args.regex, anded=False)
+    matches = prefind.finder(files_to_search, args.regex, anded=False)
 else:
-    matches = logfind.finder(files_to_search, args.regex)
+    matches = prefind.finder(files_to_search, args.regex)
 
 print("\n".join(matches))
 

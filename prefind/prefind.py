@@ -20,7 +20,7 @@ def list_filepath_regexes(config_dir):
     :rtype: list of strings (filepath regexes)
 
     """
-    logfile_filepath = "{}/.logfind".format(config_dir)
+    logfile_filepath = "{}/.prefind".format(config_dir)
 
     blank_line = re.compile(r"^\s+$")
     comment_line = re.compile(r"^#.*$")

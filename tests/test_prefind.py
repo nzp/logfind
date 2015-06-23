@@ -6,7 +6,7 @@ import unittest
 import shutil
 import os
 
-from logfind import logfind
+from prefind import prefind
 
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -37,22 +37,22 @@ class ConfigFileReadTestCase(unittest.TestCase):
     """Test config file reading."""
 
     filein = "{}/logfile".format(FIXTURES_DIR)
-    fileout = "{}/.logfind".format(TEST_USER_HOME)
+    fileout = "{}/.prefind".format(TEST_USER_HOME)
 
     def setUp(self):
-        """Copy config file to `~/.logfind`."""
+        """Copy config file to `~/.prefind`."""
 
         shutil.copy(self.filein, self.fileout)
 
     def tearDown(self):
-        """Remove the config file from `~/.logfind`."""
+        """Remove the config file from `~/.prefind`."""
 
         os.remove(self.fileout)
 
     def test_list_filepath_regexes(self):
-        """Test if `logfind.list_filepath_regexes` returns correctly."""
+        """Test if `prefind.list_filepath_regexes` returns correctly."""
 
-        inlist = logfind.list_filepath_regexes(TEST_USER_HOME)
+        inlist = prefind.list_filepath_regexes(TEST_USER_HOME)
         outlist = [
                 "/usr/share/log/blarhf",
                 "/usr/.*/.*",
@@ -67,7 +67,7 @@ class FindFilesTestCase(unittest.TestCase):
     """Test log file discovery."""
 
     def test_get_paths(self):
-        """Test if `logfind.get_paths` correctly finds RE paths."""
+        """Test if `prefind.get_paths` correctly finds RE paths."""
 
         # First member of the tuple is the RE, second is the list of paths
         # it matches.
@@ -91,12 +91,12 @@ class FindFilesTestCase(unittest.TestCase):
             ),
         ]
         for case in test_data:
-            out_paths = logfind.get_paths(case[0])
+            out_paths = prefind.get_paths(case[0])
             self.assertEquals(case[1], out_paths)
 
 
 class FinderTestCase(unittest.TestCase):
-    """Test `logfind.finder()` finding strings in given files."""
+    """Test `prefind.finder()` finding strings in given files."""
 
     search_files = [
             "{}/testlog.1".format(TEST_LOG_DIR),
@@ -117,7 +117,7 @@ class FinderTestCase(unittest.TestCase):
                 "{}/testlog.1".format(TEST_LOG_DIR),
                 "{}/testlog.2".format(TEST_LOG_DIR),
                 ]
-        result = logfind.finder(self.search_files, search_regexes)
+        result = prefind.finder(self.search_files, search_regexes)
 
         self.assertEqual(test_result, result)
 
@@ -134,7 +134,7 @@ class FinderTestCase(unittest.TestCase):
                 "{}/testlog.2".format(TEST_LOG_DIR),
                 "{}/testlog.3".format(TEST_LOG_DIR),
                 ]
-        result = logfind.finder(self.search_files, search_regexes, anded=False)
+        result = prefind.finder(self.search_files, search_regexes, anded=False)
 
         self.assertEqual(test_result, result)
 
