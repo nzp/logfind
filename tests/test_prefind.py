@@ -1,7 +1,3 @@
-# -*- coding: UTF-8 -*-
-
-from __future__ import unicode_literals
-
 import unittest
 import shutil
 import os
@@ -92,7 +88,7 @@ class FindFilesTestCase(unittest.TestCase):
         ]
         for case in test_data:
             out_paths = prefind.get_paths(case[0])
-            self.assertEquals(case[1], out_paths)
+            self.assertEqual(case[1], out_paths)
 
 
 class FinderTestCase(unittest.TestCase):

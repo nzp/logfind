@@ -1,10 +1,5 @@
-# -*- coding: UTF-8 -*-
-
-from __future__ import unicode_literals
-
 import os
 import re
-import codecs
 
 
 def list_filepath_regexes(config_dir):
@@ -96,7 +91,7 @@ def finder(search_files, search_regexes, anded=True):
 
     def _read_files():
         for f in search_files:
-            with codecs.open(f, "r", "utf-8") as infile:
+            with open(f, "r") as infile:
                 yield (infile.read(), f)
 
     for text, path in _read_files():

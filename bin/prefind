@@ -35,5 +35,5 @@ if args.o:
 else:
     matches = prefind.finder(files_to_search, args.regex)
 
-print("\n".join(matches))
+print(("\n".join(matches)))
 
