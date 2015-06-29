@@ -22,10 +22,11 @@ To use the program, run::
 String(s) to match are specified as `Python regular expressions`_ just like
 file paths are.
 
-The program has one significant option:
+Available flags:
 
 -o      Instead of the default regex chaining (logical ``AND``), use logical
         ``OR`` chaining.
+-i      Do a case insensitive search.
 
 The output is a list of file paths containing the specified regular
 expression(s), each on a separate line.
