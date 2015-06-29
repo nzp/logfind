@@ -7,12 +7,12 @@ from prefind import prefind
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
-FIXTURES_DIR = "{}/fixtures".format(BASE_DIR)
-FIXTURES_LOG_DIR = "{}/logs".format(FIXTURES_DIR)
+FIXTURES_DIR = os.path.join(BASE_DIR, "fixtures")
+FIXTURES_LOG_DIR = os.path.join(FIXTURES_DIR, "logs")
 
-TEST_FILESYSTEM_ROOT = "{}/test_root".format(BASE_DIR)
-TEST_USER_HOME = "{}/home/test".format(TEST_FILESYSTEM_ROOT)
-TEST_LOG_DIR = "{}/var/log".format(TEST_FILESYSTEM_ROOT)
+TEST_FILESYSTEM_ROOT = os.path.join(BASE_DIR, "test_root")
+TEST_USER_HOME = os.path.join(TEST_FILESYSTEM_ROOT, "home", "test")
+TEST_LOG_DIR = os.path.join(TEST_FILESYSTEM_ROOT, "var", "log")
 
 
 def setUpModule():
@@ -32,8 +32,8 @@ def tearDownModule():
 class ConfigFileReadTestCase(unittest.TestCase):
     """Test config file reading."""
 
-    filein = "{}/logfile".format(FIXTURES_DIR)
-    fileout = "{}/.prefind".format(TEST_USER_HOME)
+    filein = os.path.join(FIXTURES_DIR, "logfile")
+    fileout = os.path.join(TEST_USER_HOME, ".prefind")
 
     def setUp(self):
         """Copy config file to `~/.prefind`."""
@@ -50,6 +50,8 @@ class ConfigFileReadTestCase(unittest.TestCase):
 
         inlist = prefind.list_filepath_regexes(TEST_USER_HOME)
         outlist = [
+                # No need for os.path on paths, these are just strings in the
+                # test file.
                 "/usr/share/log/blarhf",
                 "/usr/.*/.*",
                 "/[a-zA-Z0-9]+/.+",
@@ -68,21 +70,21 @@ class FindFilesTestCase(unittest.TestCase):
         # First member of the tuple is the RE, second is the list of paths
         # it matches.
         test_data = [
-            ("{}/a.*\.log$".format(TEST_LOG_DIR), [
-                "{}/apport.log".format(TEST_LOG_DIR),
-                "{}/alternatives.log".format(TEST_LOG_DIR),
-                "{}/auth.log".format(TEST_LOG_DIR),
-                "{}/apt/term.log".format(TEST_LOG_DIR),
-                "{}/apt/history.log".format(TEST_LOG_DIR),
+            (os.path.join(TEST_LOG_DIR, r"a.*\.log$"), [
+                os.path.join(TEST_LOG_DIR, "apport.log"),
+                os.path.join(TEST_LOG_DIR, "alternatives.log"),
+                os.path.join(TEST_LOG_DIR, "auth.log"),
+                os.path.join(TEST_LOG_DIR, "apt", "term.log"),
+                os.path.join(TEST_LOG_DIR, "apt", "history.log"),
                 ]
             ),
-            ("{}/Xorg\.\d+\.log$".format(TEST_LOG_DIR), [
-                "{}/Xorg.0.log".format(TEST_LOG_DIR),
-                "{}/Xorg.1.log".format(TEST_LOG_DIR),
+            (os.path.join(TEST_LOG_DIR, r"Xorg\.\d+\.log$"), [
+                os.path.join(TEST_LOG_DIR, "Xorg.0.log"),
+                os.path.join(TEST_LOG_DIR, "Xorg.1.log"),
                 ]
             ),
-            ("{}/m.*\.\d$".format(TEST_LOG_DIR), [
-                "{}/mail.log.1".format(TEST_LOG_DIR),
+            (os.path.join(TEST_LOG_DIR, r"m.*\.\d$"), [
+                os.path.join(TEST_LOG_DIR, "mail.log.1"),
                 ]
             ),
         ]
@@ -95,9 +97,9 @@ class FinderTestCase(unittest.TestCase):
     """Test `prefind.finder()` finding strings in given files."""
 
     search_files = [
-            "{}/testlog.1".format(TEST_LOG_DIR),
-            "{}/testlog.2".format(TEST_LOG_DIR),
-            "{}/testlog.3".format(TEST_LOG_DIR),
+            os.path.join(TEST_LOG_DIR, "testlog.1"),
+            os.path.join(TEST_LOG_DIR, "testlog.2"),
+            os.path.join(TEST_LOG_DIR, "testlog.3"),
             ]
 
     def test_finder_and(self):
@@ -110,8 +112,8 @@ class FinderTestCase(unittest.TestCase):
                 "Ge.+\sWhee.*:.*$",
                 ]
         test_result = [
-                "{}/testlog.1".format(TEST_LOG_DIR),
-                "{}/testlog.2".format(TEST_LOG_DIR),
+                os.path.join(TEST_LOG_DIR, "testlog.1"),
+                os.path.join(TEST_LOG_DIR, "testlog.2"),
                 ]
         result = prefind.finder(self.search_files, search_regexes)
 
@@ -127,8 +129,8 @@ class FinderTestCase(unittest.TestCase):
                 "3Ge.+\sWhee.*:.*$",  # in testlog.2
                 ]
         test_result = [
-                "{}/testlog.2".format(TEST_LOG_DIR),
-                "{}/testlog.3".format(TEST_LOG_DIR),
+                os.path.join(TEST_LOG_DIR, "testlog.2"),
+                os.path.join(TEST_LOG_DIR, "testlog.3"),
                 ]
         result = prefind.finder(self.search_files, search_regexes, anded=False)
 

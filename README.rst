@@ -34,7 +34,7 @@ If you get errors along the lines of ``UnicodeDecodeError``, invalid start
 byte, etc. make sure your path regular expressions aren't hitting binary files
 like gzipped log archives and so on.
 
-Python and OS compatibility
+Python compatibility
 ----------------------------
 Prefind is written with Python 3 in mind.  This means no particular effort
 is made to make it compatible to 2.7, other than running unit tests and
@@ -50,9 +50,6 @@ As for Python 3 versions below 3.4, it won't run on 3.0 as it is.  As for 3.1,
 All of this matters little as any reasonable POSIX system should have Python 3
 and in particular, as of the time of this writing, at least version 3.4 as the
 default Python 3 version.
-
-On Windows, there might be minimal issues related to directory separator, or
-not.  At the moment, I haven't tested it so I can make no claims.
 
 Future
 ------
