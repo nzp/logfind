@@ -94,8 +94,12 @@ class FindFilesTestCase(unittest.TestCase):
 
 
 class FinderTestCase(unittest.TestCase):
-    """Test `prefind.finder()` finding strings in given files."""
+    """Test `prefind.finder()` finding strings in given files.
+    
+    Each option is tested independently.  There would be too much combinations
+    if testing them explicitly coupled.
 
+    """
     search_files = [
             os.path.join(TEST_LOG_DIR, "testlog.1"),
             os.path.join(TEST_LOG_DIR, "testlog.2"),
@@ -132,7 +136,41 @@ class FinderTestCase(unittest.TestCase):
                 os.path.join(TEST_LOG_DIR, "testlog.2"),
                 os.path.join(TEST_LOG_DIR, "testlog.3"),
                 ]
-        result = prefind.finder(self.search_files, search_regexes, anded=False)
+        result = prefind.finder(self.search_files, search_regexes, ored=True)
+
+        self.assertEqual(test_result, result)
+
+    def test_finder_case_sensitive(self):
+        """Test case sensitive search."""
+
+        search_regexes = [
+                "bdsm",  # In testlog.{1,2} as "BDSM".
+                "RIGHT\sNOW",  # In testlog.{1,2} as "right now".
+                "\sIWAS\s",  # In testlog.{1,2} as " IWAs ".
+                ]
+        test_result = [
+                os.path.join(TEST_LOG_DIR, "testlog.3"),
+                ]
+        result = prefind.finder(self.search_files, search_regexes)
+
+        self.assertEqual(test_result, result)
+
+    def test_finder_case_insensitive(self):
+        """Test case insensitive search."""
+
+        search_regexes = [
+                "Galubaja",  # In testlog.1 as "galubaja".
+                "Project 2501",  # In testlog.1 as "project 2501".
+                "INSERT",  # In testlog.2 as "insert".
+                "Bentley",  # In testlog.3 as "bentLEY".
+                ]
+        test_result = [
+                os.path.join(TEST_LOG_DIR, "testlog.1"),
+                os.path.join(TEST_LOG_DIR, "testlog.2"),
+                os.path.join(TEST_LOG_DIR, "testlog.3"),
+                ]
+        result = prefind.finder(self.search_files, search_regexes,
+                                case_insensitive=True)
 
         self.assertEqual(test_result, result)
 

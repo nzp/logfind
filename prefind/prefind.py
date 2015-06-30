@@ -72,19 +72,26 @@ def get_paths(regex, root=os.sep):
     return path_list
 
 
-def finder(search_files, search_regexes, anded=True):
+def finder(search_files, search_regexes, ored=False, case_insensitive=False):
     """Find given regexes in given files.
 
     :param search_files: files to search through
     :type search_files: list of strings (filepaths)
     :param search_regexes: regexes to search for
     :type search_regexes: list of strings (regexes)
-    :param anded: should the search terms be ANDed, if not OR them
-    :type anded: bool
+    :param ored: are regexes to be ORed (default ANDed)
+    :type ored: bool
+    :param case_insensitive: should the search be case insensitive (default not)
+    :type case_insensitive: bool
     :rtype: list of strings (filepaths that match)
     
     """
-    compiled_regexes = [re.compile(r"{}".format(regex), flags=re.MULTILINE)
+    if case_insensitive:
+        regex_flags = re.MULTILINE|re.IGNORECASE
+    else:
+        regex_flags = re.MULTILINE
+
+    compiled_regexes = [re.compile(r"{}".format(regex), flags=regex_flags)
                         for regex in search_regexes]
     matched_files = []
     match_tally = []  # The tally of current file.
@@ -99,11 +106,11 @@ def finder(search_files, search_regexes, anded=True):
         for r in compiled_regexes:
             match_tally.append(bool(r.search(text)))
 
-        if anded:
-            if not (False in match_tally):
+        if ored:
+            if True in match_tally:
                 matched_files.append(path)
         else:
-            if True in match_tally:
+            if not (False in match_tally):
                 matched_files.append(path)
 
     return matched_files

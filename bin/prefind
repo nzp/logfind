@@ -25,6 +25,8 @@ parser.add_argument(
 
 args = parser.parse_args()
 
+flags = {"ored": args.o, "case_insensitive": args.i}
+
 
 path_regexes = prefind.list_filepath_regexes(os.environ["HOME"])
 
@@ -33,10 +35,7 @@ path_regexes = prefind.list_filepath_regexes(os.environ["HOME"])
 files_to_search = list(itertools.chain.from_iterable(
         [prefind.get_paths(regex) for regex in path_regexes]))
 
-if args.o:
-    matches = prefind.finder(files_to_search, args.regex, anded=False)
-else:
-    matches = prefind.finder(files_to_search, args.regex)
+matches = prefind.finder(files_to_search, args.regex, **flags)
 
 print(("\n".join(matches)))
 
