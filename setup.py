@@ -15,7 +15,7 @@ config = {
         "license": "BSD 2-Clause",
         "scripts": ["bin/prefind"],
         "data_files": [
-            ("share/doc/prefind", [
+            ("share/doc/prefind", [  # TODO: See what's sensible on Windows.
                 "README.rst",
                 "LICENSE",
                 ])]

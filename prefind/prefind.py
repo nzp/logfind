@@ -15,7 +15,7 @@ def list_filepath_regexes(config_dir):
     :rtype: list of strings (filepath regexes)
 
     """
-    logfile_filepath = "{}/.prefind".format(config_dir)
+    logfile_filepath = os.path.join(config_dir, ".prefind")
 
     blank_line = re.compile(r"^\s+$")
     comment_line = re.compile(r"^#.*$")
@@ -27,7 +27,7 @@ def list_filepath_regexes(config_dir):
     return filepath_regexes
 
 
-def get_paths(regex, root="/"):
+def get_paths(regex, root=os.sep):
     """Find paths matching the regular expression.
     
     :param root: root directory for the walk
@@ -48,7 +48,7 @@ def get_paths(regex, root="/"):
     #
     # Since string.split() gives "" as the first element of the list in this
     # case (because of the leading separator), we just discard it.
-    re_parts = regex.split("/")
+    re_parts = regex.split(os.sep)
     del re_parts[0]
 
     for directory, children, filenames in os.walk(root):
