@@ -36,7 +36,7 @@ byte, etc. make sure your path regular expressions aren't hitting binary files
 like gzipped log archives and so on.
 
 Python compatibility
-----------------------------
+---------------------
 Prefind is written with Python 3 in mind.  This means no particular effort
 is made to make it compatible to 2.7, other than running unit tests and
 the ``prefind`` script with very simple strings and files provided in
