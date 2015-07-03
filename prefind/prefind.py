@@ -94,24 +94,26 @@ def finder(search_files, search_regexes, ored=False, case_insensitive=False):
     compiled_regexes = [re.compile(r"{}".format(regex), flags=regex_flags)
                         for regex in search_regexes]
     matched_files = []
-    match_tally = []  # The tally of current file.
 
     def _read_files():
         for f in search_files:
             with open(f, "r") as infile:
                 yield (infile.read(), f)
 
+    # We don't need to know which regexes matched or not, so do short circuit
+    # evaluation.
     for text, path in _read_files():
-        match_tally[:] = []
-        for r in compiled_regexes:
-            match_tally.append(bool(r.search(text)))
-
         if ored:
-            if True in match_tally:
-                matched_files.append(path)
+            for r in compiled_regexes:
+                if r.search(text):
+                    matched_files.append(path)
+                    break
         else:
-            if not (False in match_tally):
-                matched_files.append(path)
+            matched_files.append(path)
+            for r in compiled_regexes:
+                if not r.search(text):
+                    matched_files.remove(path)
+                    break
 
     return matched_files
 
