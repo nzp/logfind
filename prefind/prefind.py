@@ -1,5 +1,6 @@
 import os
 import re
+from concurrent import futures
 
 
 def list_filepath_regexes(config_dir):
@@ -33,11 +34,13 @@ def get_paths(regex, root=os.sep):
     :param root: root directory for the walk
     :type root: string
     :param regex: regular expression to match against
-    :rtype: list of strings (matched filepaths)
+    :rtype: set of strings (matched filepaths)
 
     """
     cre = re.compile(regex)
-    path_list = []
+
+    # To make sure there are no duplicate paths, use a set.
+    path_set = set()
 
     # To be able to have a reasonable (in fact, fast) walk time when starting
     # from "/" (or some other high root) we need to filter out unneeded
@@ -67,23 +70,51 @@ def get_paths(regex, root=os.sep):
         for filename in filenames:
             path = os.path.join(directory, filename)
             if cre.match(path):
-                path_list.append(path)
+                path_set.add(path)
 
-    return path_list
+    return path_set
+
+
+class _search_file:
+    # Since file searching callable needs to be pickable to work with
+    # concurrent.future module's map() in finder(), it can't be a closure
+    # (which we need to wrap the value of ored) so __call__ gives equivalent
+    # functionality.  That is why this is a class in the first place.
+    def __init__(self, ored, regexes):
+        self.ored = ored
+        self.regexes = regexes
+
+    def __call__(self, file_to_search):
+        with open(file_to_search, "r") as f:
+            text = f.read()
+
+        if self.ored:
+            for r in self.regexes:
+                if r.search(text):
+                    return file_to_search
+        else:
+            matched = True
+            for r in self.regexes:
+                if not r.search(text):
+                    matched = False
+                    break
+
+            if matched:
+                return file_to_search
 
 
 def finder(search_files, search_regexes, ored=False, case_insensitive=False):
     """Find given regexes in given files.
 
     :param search_files: files to search through
-    :type search_files: list of strings (filepaths)
+    :type search_files: an iterable of strings (filepaths)
     :param search_regexes: regexes to search for
     :type search_regexes: list of strings (regexes)
     :param ored: are regexes to be ORed (default ANDed)
     :type ored: bool
     :param case_insensitive: should the search be case insensitive (default not)
     :type case_insensitive: bool
-    :rtype: list of strings (filepaths that match)
+    :rtype: set of strings (filepaths that match)
     
     """
     if case_insensitive:
@@ -93,27 +124,10 @@ def finder(search_files, search_regexes, ored=False, case_insensitive=False):
 
     compiled_regexes = [re.compile(r"{}".format(regex), flags=regex_flags)
                         for regex in search_regexes]
-    matched_files = []
 
-    def _read_files():
-        for f in search_files:
-            with open(f, "r") as infile:
-                yield (infile.read(), f)
-
-    # We don't need to know which regexes matched or not, so do short circuit
-    # evaluation.
-    for text, path in _read_files():
-        if ored:
-            for r in compiled_regexes:
-                if r.search(text):
-                    matched_files.append(path)
-                    break
-        else:
-            matched_files.append(path)
-            for r in compiled_regexes:
-                if not r.search(text):
-                    matched_files.remove(path)
-                    break
+    with futures.ProcessPoolExecutor() as executor:
+        searcher = _search_file(ored, compiled_regexes)
+        matched_files = {f for f in executor.map(searcher, search_files) if f}
 
     return matched_files
 

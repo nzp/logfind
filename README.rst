@@ -37,20 +37,12 @@ like gzipped log archives and so on.
 
 Python compatibility
 ---------------------
-Prefind is written with Python 3 in mind.  This means no particular effort
-is made to make it compatible to 2.7, other than running unit tests and
-the ``prefind`` script with very simple strings and files provided in
-``tests/fixtures/logs`` directory.  The tests pass, and the program runs, but
-the issue is string handling differences in 3 compared to 2.  This means that
-it's reasonable to say that as long as the input is ASCII (in both file contents
-and regular expressions) everything will work fine.  Otherwise, all bets are
-off.
-
-As for Python 3 versions below 3.4, it won't run on 3.0 as it is.  As for 3.1,
-3.2, and 3.3, I don't have the time to test them, so I can't claim anything.
-All of this matters little as any reasonable POSIX system should have Python 3
-and in particular, as of the time of this writing, at least version 3.4 as the
-default Python 3 version.
+Since multiprocessing uses ``concurrent.futures`` module, Python 2 is not
+supported.  As for Python 3 versions below 3.4, it won't run on 3.0 as it is.
+As for 3.1, 3.2, and 3.3, I don't have the time to test them, so I can't claim
+anything.  All of this matters little as any reasonable POSIX system should
+have Python 3 and in particular, as of the time of this writing, at least
+version 3.4 as the default Python 3 version.
 
 Future
 ------

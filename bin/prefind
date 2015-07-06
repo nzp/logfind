@@ -7,35 +7,38 @@ import itertools
 from prefind import prefind
 
 
-parser = argparse.ArgumentParser(
-        description="Find strings in files using Python regular expressions.")
+# We have to guard because of multiprocessing (absence of os.fork()) on
+# Windows.
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+            description="Find strings in files using Python regular expressions.")
 
-parser.add_argument(
-        "regex", nargs="+",
-        help="regular expression(s) to search for")
-parser.add_argument(
-        "-o", action="store_true",
-        help="chain regular expressions using logical OR (default is AND)")
-parser.add_argument(
-        "-i", action="store_true",
-        help="do a case insensitive search")
-parser.add_argument(
-        "-v", "--version", action="version", version="0.1",
-        help="print version number and exit")
+    parser.add_argument(
+            "regex", nargs="+",
+            help="regular expression(s) to search for")
+    parser.add_argument(
+            "-o", action="store_true",
+            help="chain regular expressions using logical OR (default is AND)")
+    parser.add_argument(
+            "-i", action="store_true",
+            help="do a case insensitive search")
+    parser.add_argument(
+            "-v", "--version", action="version", version="0.1",
+            help="print version number and exit")
 
-args = parser.parse_args()
+    args = parser.parse_args()
 
-flags = {"ored": args.o, "case_insensitive": args.i}
+    flags = {"ored": args.o, "case_insensitive": args.i}
 
 
-path_regexes = prefind.list_filepath_regexes(os.environ["HOME"])
+    path_regexes = prefind.list_filepath_regexes(os.environ["HOME"])
 
-# The list comprehension will produce list of lists, so flatten it with
-# it.chain...
-files_to_search = list(itertools.chain.from_iterable(
-        [prefind.get_paths(regex) for regex in path_regexes]))
+    # The list comprehension will produce list of lists, so flatten it with
+    # it.chain...
+    files_to_search = list(itertools.chain.from_iterable(
+            [prefind.get_paths(regex) for regex in path_regexes]))
 
-matches = prefind.finder(files_to_search, args.regex, **flags)
+    matches = prefind.finder(files_to_search, args.regex, **flags)
 
-print(("\n".join(matches)))
+    print(("\n".join(matches)))
 

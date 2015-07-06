@@ -70,22 +70,22 @@ class FindFilesTestCase(unittest.TestCase):
         # First member of the tuple is the RE, second is the list of paths
         # it matches.
         test_data = [
-            (os.path.join(TEST_LOG_DIR, r"a.*\.log$"), [
+            (os.path.join(TEST_LOG_DIR, r"a.*\.log$"), {
                 os.path.join(TEST_LOG_DIR, "apport.log"),
                 os.path.join(TEST_LOG_DIR, "alternatives.log"),
                 os.path.join(TEST_LOG_DIR, "auth.log"),
                 os.path.join(TEST_LOG_DIR, "apt", "term.log"),
                 os.path.join(TEST_LOG_DIR, "apt", "history.log"),
-                ]
+                }
             ),
-            (os.path.join(TEST_LOG_DIR, r"Xorg\.\d+\.log$"), [
+            (os.path.join(TEST_LOG_DIR, r"Xorg\.\d+\.log$"), {
                 os.path.join(TEST_LOG_DIR, "Xorg.0.log"),
                 os.path.join(TEST_LOG_DIR, "Xorg.1.log"),
-                ]
+                }
             ),
-            (os.path.join(TEST_LOG_DIR, r"m.*\.\d$"), [
+            (os.path.join(TEST_LOG_DIR, r"m.*\.\d$"), {
                 os.path.join(TEST_LOG_DIR, "mail.log.1"),
-                ]
+                }
             ),
         ]
         for case in test_data:
@@ -100,11 +100,11 @@ class FinderTestCase(unittest.TestCase):
     if testing them explicitly coupled.
 
     """
-    search_files = [
+    search_files = {
             os.path.join(TEST_LOG_DIR, "testlog.1"),
             os.path.join(TEST_LOG_DIR, "testlog.2"),
             os.path.join(TEST_LOG_DIR, "testlog.3"),
-            ]
+            }
 
     def test_finder_and(self):
         """Test searching ANDed regexes."""
@@ -115,10 +115,10 @@ class FinderTestCase(unittest.TestCase):
                 "three",
                 "Ge.+\sWhee.*:.*$",
                 ]
-        test_result = [
+        test_result = {
                 os.path.join(TEST_LOG_DIR, "testlog.1"),
                 os.path.join(TEST_LOG_DIR, "testlog.2"),
-                ]
+                }
         result = prefind.finder(self.search_files, search_regexes)
 
         self.assertEqual(test_result, result)
@@ -132,10 +132,10 @@ class FinderTestCase(unittest.TestCase):
                 "craptastic",  # in testlog.3
                 "3Ge.+\sWhee.*:.*$",  # in testlog.2
                 ]
-        test_result = [
+        test_result = {
                 os.path.join(TEST_LOG_DIR, "testlog.2"),
                 os.path.join(TEST_LOG_DIR, "testlog.3"),
-                ]
+                }
         result = prefind.finder(self.search_files, search_regexes, ored=True)
 
         self.assertEqual(test_result, result)
@@ -148,9 +148,9 @@ class FinderTestCase(unittest.TestCase):
                 "RIGHT\sNOW",  # In testlog.{1,2} as "right now".
                 "\sIWAS\s",  # In testlog.{1,2} as " IWAs ".
                 ]
-        test_result = [
+        test_result = {
                 os.path.join(TEST_LOG_DIR, "testlog.3"),
-                ]
+                }
         result = prefind.finder(self.search_files, search_regexes)
 
         self.assertEqual(test_result, result)
@@ -164,11 +164,11 @@ class FinderTestCase(unittest.TestCase):
                 "INSERT",  # In testlog.2 as "insert".
                 "Bentley",  # In testlog.3 as "bentLEY".
                 ]
-        test_result = [
+        test_result = {
                 os.path.join(TEST_LOG_DIR, "testlog.1"),
                 os.path.join(TEST_LOG_DIR, "testlog.2"),
                 os.path.join(TEST_LOG_DIR, "testlog.3"),
-                ]
+                }
         result = prefind.finder(self.search_files, search_regexes,
                                 case_insensitive=True)
 
